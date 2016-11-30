@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Account from './components/createAccount';
+import App from './components/app';
 
 ReactDOM.render(
-    <Account/>, document.getElementById('main'));
+    <App/>, document.getElementById('main'));
