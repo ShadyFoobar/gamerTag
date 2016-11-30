@@ -21,14 +21,14 @@ var Dashboard = React.createClass({
                     recentGame: "Overwatch"
                 }, {
                     gamerTAG: "BLITZMAN",
-                    name: "Nic T",
-                    location: "STL",
+                    name: "Nic R",
+                    location: "LA",
                     status: "Online",
                     recentGame: "Cod"
                 }, {
                     gamerTAG: "RUNNEDED",
-                    name: "Nic T",
-                    location: "STL",
+                    name: "Nic P",
+                    location: "CHI",
                     status: "Offline",
                     recentGame: "Halo"
                 }
