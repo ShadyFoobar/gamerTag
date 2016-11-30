@@ -2,15 +2,45 @@ import React from 'react';
 import FriendsList from './friendsList/friendsList';
 import MyAccountInfo from './account/myAccountInfo';
 
-{/* <NewFriendSearch />
-<MyUserInfo /> */}
-
 var Dashboard = React.createClass({
+    getInitialState: function() {
+        return {
+            user: {
+                gamerTAG: "Shady Foobar",
+                name: "Nic T",
+                location: "STL",
+                status: "Online",
+                recentGame: "Overwatch"
+            },
+            friends: [
+                {
+                    gamerTAG: "THE NAME",
+                    name: "Nic T",
+                    location: "STL",
+                    status: "Online",
+                    recentGame: "Overwatch"
+                }, {
+                    gamerTAG: "BLITZMAN",
+                    name: "Nic T",
+                    location: "STL",
+                    status: "Online",
+                    recentGame: "Cod"
+                }, {
+                    gamerTAG: "RUNNEDED",
+                    name: "Nic T",
+                    location: "STL",
+                    status: "Offline",
+                    recentGame: "Halo"
+                }
+            ]
+        };
+    },
+
     render: function() {
         return (
             <div>
-              <MyAccountInfo />
-              <FriendsList />
+                <MyAccountInfo gamerTAG={this.state.user.gamerTAG} name={this.state.user.name} location={this.state.user.location} status={this.state.user.status} recentGame={this.state.user.recentGame}/>
+                <FriendsList friends={this.state.friends}/>
 
             </div>
         )
