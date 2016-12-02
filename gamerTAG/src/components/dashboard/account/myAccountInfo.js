@@ -7,18 +7,19 @@ var MyAccountInfo = React.createClass({
         return (
             <div className="myAccountInfo">
                 <Row className="show-grid">
-                    <Col xs={6}>
+
+                    <Col xs={4}>
+                        <p>This is where the icon goes</p>
+                    </Col>
+                    <Col xs={8}>
                         <p>gamerTAG: {this.props.gamerTAG}</p>
                         <p>Name: {this.props.name}</p>
                         <p>Location: {this.props.location}</p>
                         <p>Status: {this.props.status}</p>
                         <p>Recent Game: {this.props.recentGame}</p>
                     </Col>
-                      <p>This is where the game tags go</p>
-                    <Col xs={6}>
-
-                    </Col>
                 </Row>
+
             </div>
         )
     }
