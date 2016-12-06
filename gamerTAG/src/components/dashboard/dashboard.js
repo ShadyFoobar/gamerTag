@@ -20,17 +20,17 @@ var Dashboard = React.createClass({
                 <Grid>
                     <Row className="show-grid">
                         <Col xs={9}>
-                            <Row className="show-grid">
+                            <Row className="show-grid my-summary-info">
                                 <div>
                                     <MyAccountInfo gamerTAG={this.state.user.gamerTAG} name={this.state.user.name} location={this.state.user.location} status={this.state.user.status} recentGame={this.state.user.recentGame}/>
                                 </div>
                             </Row>
-                            <Row className="show-grid">
+                            <Row className="show-grid my-friend-suggestion">
                                 <Search allUsers={this.state.allUsers}/>
                             </Row>
                         </Col>
                         <Col xs={3}>
-                            <div>
+                            <div className="my-friends">
                                 <FriendsList friends={this.state.user.friends}/>
                             </div>
                         </Col>

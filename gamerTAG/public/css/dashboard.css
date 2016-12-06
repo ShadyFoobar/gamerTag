@@ -1,0 +1,21 @@
+.my-friend-suggestion{
+  height: 275px;
+  background-color: blue;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  border: solid 2px grey;
+}
+
+.my-summary-info{
+  height: 274px;
+  background-color: green;
+  border: solid 2px grey;
+}
+
+.my-friends{
+  background-color: purple;
+  height: 549px;
+  overflow-y: scroll;
+  overflow: hidden;
+}
