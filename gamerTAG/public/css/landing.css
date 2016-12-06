@@ -1,0 +1,12 @@
+.sign-up-button {
+  text-align: right;
+}
+
+.app-description {
+  text-align: center;
+}
+
+.sign-up-button button, .sign-in-button button{
+  width:60%;
+  height:60%;
+}

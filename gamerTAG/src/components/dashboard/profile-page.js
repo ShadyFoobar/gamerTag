@@ -7,7 +7,7 @@ import {Row} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 import data from '../../data.js';
 
-var Dashboard = React.createClass({
+var ProfilePage = React.createClass({
    getInitialState : function(){
      return data;
    },
@@ -16,20 +16,12 @@ var Dashboard = React.createClass({
             <div>
                 <Grid>
                     <Row className="show-grid">
-                        <Col xs={9}>
+                        <Col xs={12}>
                             <Row className="show-grid">
                                 <div>
                                     <MyAccountInfo gamerTAG={this.state.user.gamerTAG} name={this.state.user.name} location={this.state.user.location} status={this.state.user.status} recentGame={this.state.user.recentGame}/>
                                 </div>
                             </Row>
-                            <Row className="show-grid">
-                                <Search allUsers={this.state.allUsers}/>
-                            </Row>
-                        </Col>
-                        <Col xs={3}>
-                            <div>
-                                <FriendsList friends={this.state.user.friends}/>
-                            </div>
                         </Col>
                     </Row>
                 </Grid>
@@ -38,4 +30,4 @@ var Dashboard = React.createClass({
     }
 });
 
-module.exports = Dashboard;
+module.exports = ProfilePage;

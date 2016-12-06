@@ -4,8 +4,6 @@ var CreateTagInfo = React.createClass({
     render: function() {
         return (
             <div className="createAccount">
-                <form>
-                    <img src={require('../img/gamertag.jpg')} alt="tagType" height="42" width="42"/>
                     <p>{this.props.tagName}</p>
                     <input type="text"/>
                     <p>Play Frequencey</p>
@@ -23,7 +21,6 @@ var CreateTagInfo = React.createClass({
                     Average
                     <input type="radio" name="skill" value="newbie"/>
                     Newbie
-                </form>
             </div>
         )
     }
