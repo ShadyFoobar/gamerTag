@@ -1,7 +1,5 @@
 import React from 'react';
-import FriendsList from './friendsList/friendsList';
 import MyAccountInfo from './account/myAccountInfo';
-import Search from './search/search';
 import {Grid} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';

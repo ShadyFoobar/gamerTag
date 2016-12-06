@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard/dashboard';
 import CreateAccount from './components/createAccount/createAccount';
 import Landing from './components/landing/landing';
 import SignIn from './components/sign-in/sign-in';
+import ProfilePage from './components/dashboard/profile-page';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 
 ReactDOM.render(
@@ -13,6 +14,7 @@ ReactDOM.render(
           <IndexRoute component={Landing}/>
           <Route path="create-account" component={CreateAccount}/>
           <Route path="sign-in" component={SignIn}/>
+          <Route path="profile-page" component={ProfilePage}/>
           <Route path="dashboard" component={Dashboard}/> {/* <Route path="*" component={NoMatch}/> */}
       </Route>
   </Router>, document.getElementById('main'));

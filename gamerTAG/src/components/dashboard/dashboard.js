@@ -11,6 +11,9 @@ var Dashboard = React.createClass({
    getInitialState : function(){
      return data;
    },
+   componentDidMount: function(){
+      this.props.changeLogIn();
+   },
     render: function() {
         return (
             <div>
