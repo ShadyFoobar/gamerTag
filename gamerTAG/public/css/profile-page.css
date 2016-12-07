@@ -1,0 +1,18 @@
+.profilePic {
+  background-color: blue;
+}
+
+.profilePic img {
+  width: 100%;
+}
+
+.allGameStat {
+  overflow-x: scroll;
+  white-space: nowrap;
+
+}
+
+.singleGameStat {
+  display: inline-block;
+  padding: 15px 15px;
+}

@@ -2,18 +2,15 @@ import React from 'react';
 import {Row} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 
-var MyAccountInfo = React.createClass({
+var MyProfileData = React.createClass({
     render: function() {
         return (
-            <div className="myAccountInfo">
+            <div className="myProfileData">
                 <Row className="show-grid">
-
-                    <Col xs={4}>
-                      <div className="profilePic">
-                        <img src={require('../../../img/blackSquare.png')} alt="profile-pic" />
-                      </div>
-                    </Col>
-                    <Col xs={8}>
+                    <Col xs={12}>
+                        <div className="profilePic">
+                            <img src={require('../../../img/blackSquare.png')} alt="profile-pic"/>
+                        </div>
                         <p className="tag">gamerTAG: {this.props.gamerTAG}</p>
                         <p>Name: {this.props.name}</p>
                         <p>Location: {this.props.location}</p>
@@ -27,4 +24,4 @@ var MyAccountInfo = React.createClass({
     }
 });
 
-module.exports = MyAccountInfo;
+module.exports = MyProfileData;
