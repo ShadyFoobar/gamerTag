@@ -5,7 +5,7 @@ import Dashboard from './components/dashboard/dashboard';
 import CreateAccount from './components/createAccount/createAccount';
 import Landing from './components/landing/landing';
 import SignIn from './components/sign-in/sign-in';
-import ProfilePage from './components/dashboard/profile-page';
+import ProfilePage from './components/profile/profile-page';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 
 ReactDOM.render(

@@ -9,7 +9,7 @@ var MyProfileData = React.createClass({
                 <Row className="show-grid">
                     <Col xs={12}>
                         <div className="profilePic">
-                            <img src={require('../../../img/blackSquare.png')} alt="profile-pic"/>
+                            <img src={require('../../img/blackSquare.png')} alt="profile-pic"/>
                         </div>
                         <p className="tag">gamerTAG: {this.props.gamerTAG}</p>
                         <p>Name: {this.props.name}</p>
