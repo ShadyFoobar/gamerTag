@@ -4,6 +4,14 @@ import ToggleDisplay from 'react-toggle-display';
 
 var Navbar = React.createClass({
 
+    logoRouting: function(ifLoggedIn){
+      if(ifLoggedIn){
+        return "/dashboard";
+      } else {
+        return "/"
+      }
+    },
+
     render: function() {
         return (
             <div className="header">
@@ -19,8 +27,8 @@ var Navbar = React.createClass({
                                         <span className="icon-bar"></span>
                                     </button>
                                 </ToggleDisplay>
-                                <a className="navbar-brand" href="#social">
-                                    <img src="Images/MDlogo.png" alt="companyLogo" className="headerLogo"/>
+                                <a className="navbar-brand">
+                                    <Link to={this.logoRouting(this.props.isLoggedIn)}><img src="Images/MDlogo.png" alt="companyLogo" className="headerLogo"/></Link>
                                 </a>
                             </div>
                             <ToggleDisplay show={this.props.isLoggedIn}>

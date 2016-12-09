@@ -2,6 +2,7 @@ import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 
 var Friend = React.createClass({
+  
 
     render: function() {
         return (
@@ -14,6 +15,12 @@ var Friend = React.createClass({
                             <p>Status:{this.props.friendStatus}</p>
                             <p>Recent:{this.props.friendRecent}</p>
                         </div>
+                    </Col>
+                    <Col xs={2}>
+                      <div>
+                          <button type="button">Add Friend!</button>
+                      </div>
+
                     </Col>
                 </Row>
             </div>
