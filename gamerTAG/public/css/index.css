@@ -8,15 +8,11 @@ grey: #6E6E6E
 
 */
 
-#main{
-  margin-top: 70px;
-}
-
 .footer{
   background-color: black;
   margin-top: 20px;
 }
 
 body{
-  background-color: yellow;
+  background-color: #6E6E6E;
 }

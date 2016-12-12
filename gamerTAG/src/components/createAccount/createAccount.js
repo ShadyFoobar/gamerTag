@@ -38,7 +38,7 @@ var CreateAccount = React.createClass({
                     </Row>
                 </form>
                 <div className="join-button">
-                    <Link to='/dashboard'>
+                    <Link to='/profile-page'>
                         <button type="button" className="btn btn-primary">Join!</button>
                     </Link>
                 </div>

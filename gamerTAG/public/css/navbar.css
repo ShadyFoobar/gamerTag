@@ -1,0 +1,12 @@
+.logoBar {
+  height: 60px;
+  background-color: #393939;
+}
+
+.logoBar img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2px;
+  height: 56px;
+}

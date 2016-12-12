@@ -1,8 +1,12 @@
 import React from 'react';
 import Friend from './../friendsList/friend';
 import {Row, Col} from 'react-bootstrap';
+import data from '../../data.js';
 
-var Search = React.createClass({
+var addFriends = React.createClass({
+  getInitialState : function(){
+    return data;
+  },
     render: function() {
         return (
             <div className="myAccountInfo">
@@ -14,7 +18,7 @@ var Search = React.createClass({
 
                 <Row className="show-grid">
                     <Col xs={6}>
-                        {this.props.allUsers.filter(function(user, index) {
+                        {this.state.allUsers.filter(function(user, index) {
                             if (index % 2 === 0) {
                                 return user;
                             }
@@ -23,7 +27,7 @@ var Search = React.createClass({
                         })}
                     </Col>
                     <Col xs={6}>
-                        {this.props.allUsers.filter(function(user, index) {
+                        {this.state.allUsers.filter(function(user, index) {
                             if (index % 2 !== 0) {
                                 return user;
                             }
@@ -37,4 +41,4 @@ var Search = React.createClass({
     }
 });
 
-module.exports = Search;
+module.exports = addFriends;

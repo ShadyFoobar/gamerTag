@@ -1,20 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app';
-import Dashboard from './components/dashboard/dashboard';
+import FriendsList from './components/friendsList/friendsList';
+import AddFriends from './components/addFriends/addFriends';
 import CreateAccount from './components/createAccount/createAccount';
 import Landing from './components/landing/landing';
 import SignIn from './components/sign-in/sign-in';
 import ProfilePage from './components/profile/profile-page';
-import {Router, Route, browserHistory, IndexRoute} from 'react-router'
+import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 ReactDOM.render(
-  <Router history={browserHistory}>
-      <Route path="/" component={App}>
-          <IndexRoute component={Landing}/>
-          <Route path="create-account" component={CreateAccount}/>
-          <Route path="sign-in" component={SignIn}/>
-          <Route path="profile-page" component={ProfilePage}/>
-          <Route path="dashboard" component={Dashboard}/> {/* <Route path="*" component={NoMatch}/> */}
-      </Route>
-  </Router>, document.getElementById('main'));
+  <MuiThemeProvider>
+    <Router history={browserHistory}>
+        <Route path="/" component={App}>
+            <IndexRoute component={Landing}/>
+            <Route path="create-account" component={CreateAccount}/>
+            <Route path="sign-in" component={SignIn}/>
+            <Route path="profile-page" component={ProfilePage}/>
+            <Route path="friends-list" component={FriendsList}/>
+            <Route path="add-friends" component={AddFriends}/>
+            {/* <Route path="*" component={NoMatch}/> */}
+        </Route>
+    </Router>
+  </MuiThemeProvider> ,document.getElementById('main')
+);

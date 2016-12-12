@@ -15,9 +15,9 @@ var SignIn = React.createClass({
                                 <input type="text"/>
                                 <p>Password</p>
                                 <input type="text"/>
-                                <Link to='/dashboard'><p>Forgot Password</p></Link>
+                                <Link to='/profile-page'><p>Forgot Password</p></Link>
                                 <Link to='/create-account'><p>Don't got a Tag</p></Link>
-                                <Link to='/dashboard'><button type="submit" form="form1" value="Submit">Submit</button></Link>
+                                <Link to='/profile-page'><button type="submit" form="form1" value="Submit">Submit</button></Link>
                             </div>
                         </Col>
                     </Row>
