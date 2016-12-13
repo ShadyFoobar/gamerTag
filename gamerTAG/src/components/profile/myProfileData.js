@@ -1,7 +1,12 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
+import {CardMedia, CardTitle} from 'material-ui/Card';
 import './myProfileData.css';
-
+var styles = {
+  cardTitle: {
+    padding: '0 10px'
+  }
+}
 var MyProfileData = React.createClass({
     render: function() {
         return (
@@ -9,7 +14,14 @@ var MyProfileData = React.createClass({
               <h2>Profile</h2>
               <Col xs={12} sm={4}>
                 <div className="profilePic">
-                  <img src='/images/default_avatar.jpg' alt="profile-pic"/>
+                  <CardMedia
+                    overlay={<CardTitle
+                      title={this.props.gamerTAG}
+                      subtitle="Pro"
+                      style={styles.cardTitle} />}
+                   >
+                    <img src='/images/default_avatar.jpg' alt="profile-pic"/>
+                  </CardMedia>
                 </div>
               </Col>
               <Col xs={12} sm={4}>
