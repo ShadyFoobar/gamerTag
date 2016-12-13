@@ -1,12 +1,13 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import Paper from 'material-ui/Paper';
+import './recommendedFriend.css';
 
 var RecommendedFriend = React.createClass({
     render: function() {
         return (
             <div>
-              <Paper zDepth={3} className="friend">
+              <Paper zDepth={3} className="reccomendedFriend">
                 <Row className="show-grid">
                     <Col xs={12} sm={10} md={10}>
                         <div className="friendData">

@@ -1,0 +1,15 @@
+.reccomendedFriend {
+  background: linear-gradient(#F3843E, #FAB433);
+  border: solid 2px #3871BB;
+  margin: 10px;
+  padding: 0px 5px;
+}
+
+.reccomendedFriendProfilePic img{
+  width: 100%;
+  max-height: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  min-width: 100px;
+  display: block;
+}
