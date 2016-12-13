@@ -1,9 +1,9 @@
 import React from 'react';
-import {Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import TextField from 'material-ui/TextField';
 import {orange800} from 'material-ui/styles/colors';
 
-var TagInfo = React.createClass({
+var GamerTagInfo = React.createClass({
     render: function() {
       var styles = {
         underlineStyle: {
@@ -11,10 +11,10 @@ var TagInfo = React.createClass({
         },
       };
         return (
-            <div className="tagSection">
+            <Row className="tagSection">
                 <Col xs={12}>
                     <h2>GamerTags</h2>
-                    <div className="tagInfo">
+                    <Row className="tagInfo">
                         <Col sm={12} md={6}>
                             <div>
                                 <p>LoL Summoner Name</p>
@@ -51,11 +51,11 @@ var TagInfo = React.createClass({
                                   hintText="Playstation UserName" />
                             </div>
                         </Col>
-                    </div>
+                    </Row>
                 </Col>
-            </div>
+            </Row>
         )
     }
 });
 
-module.exports = TagInfo;
+module.exports = GamerTagInfo;
