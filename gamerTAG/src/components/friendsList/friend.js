@@ -9,10 +9,10 @@ var Friend = React.createClass({
             <div>
                 <Paper zDepth={3} className="friend">
                     <Row className="show-grid">
-                        <Col xs={5} sm={2} md={2} className="friendProfilePic">
+                        <Col xs={5} sm={2} md={2} lg={1} className="friendProfilePic">
                             <img src='/images/default_avatar.jpg' alt="profile-pic"/>
                         </Col>
-                        <Col xs={7} sm={10} md={10}>
+                        <Col xs={7} sm={10} md={10} lg={11}>
                             <div className="friendData">
                                 <p>{this.props.friendName}</p>
                                 <p>Status: {this.props.friendStatus}</p>
