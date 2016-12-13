@@ -1,15 +1,19 @@
 import React from 'react';
 import Friend from './../friendsList/friend';
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, Grid} from 'react-bootstrap';
 import data from '../../data.js';
 
 var addFriends = React.createClass({
   getInitialState : function(){
     return data;
   },
+  componentDidMount: function(){
+     this.props.changeLogIn();
+  },
     render: function() {
         return (
-            <div className="myAccountInfo">
+            <div>
+              <Grid className="all-page-layout" fluid>
                 <Row className="show-grid">
                     <Col xs={12}>
                         <h1>FIND A FRIEND</h1>
@@ -36,6 +40,7 @@ var addFriends = React.createClass({
                         })}
                     </Col>
                 </Row>
+              </Grid>
             </div>
         )
     }

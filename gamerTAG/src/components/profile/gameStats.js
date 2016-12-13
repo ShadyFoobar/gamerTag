@@ -1,18 +1,24 @@
 import React from 'react';
-import {Row} from 'react-bootstrap';
-import {Col} from 'react-bootstrap';
 import SingleGameStat from './singleGameStat';
+import {Row, Col} from 'react-bootstrap';
 
 var GameStats = React.createClass({
     render: function() {
         return (
-            <div className="allGameStat">
-                    <SingleGameStat/>
-                    <SingleGameStat/>
-                    <SingleGameStat/>
-                    <SingleGameStat/>
-                    <SingleGameStat/>
-                    <SingleGameStat/>
+            <div>
+                <Col xs={12}>
+                    <div>
+                        <h2>My Games</h2>
+                    </div>
+                    <div className="allGameStat">
+                        <SingleGameStat/>
+                        <SingleGameStat/>
+                        <SingleGameStat/>
+                        <SingleGameStat/>
+                        <SingleGameStat/>
+                        <SingleGameStat/>
+                    </div>
+                </Col>
             </div>
         )
     }

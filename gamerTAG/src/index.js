@@ -9,9 +9,21 @@ import SignIn from './components/sign-in/sign-in';
 import ProfilePage from './components/profile/profile-page';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { orange600 } from 'material-ui/styles/colors';
+
+const muiTheme = getMuiTheme({
+ palette: {
+   accent1Color: orange600,
+ },
+ appBar: {
+   height: 50,
+ },
+});
 
 ReactDOM.render(
-  <MuiThemeProvider>
+
+  <MuiThemeProvider muiTheme={muiTheme}>
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Landing}/>

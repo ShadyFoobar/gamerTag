@@ -1,6 +1,5 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
-import AddFriendButton from '../general/addFriendButton';
 
 var Friend = React.createClass({
 

@@ -31,6 +31,23 @@ module.exports = {
                 status: "Offline",
                 recentGame: "Halo"
             }
+        ],
+        myGames: [
+          {
+            name: "1",
+            pic: "pic",
+            skill: "pro"
+          },
+          {
+            name: "2",
+            pic: "pic",
+            skill: "pro"
+          },
+          {
+            name: "3",
+            pic: "pic",
+            skill: "pro"
+          }
         ]
     },
     allUsers: [

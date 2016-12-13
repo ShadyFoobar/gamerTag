@@ -1,6 +1,4 @@
 import React from 'react';
-import {Row} from 'react-bootstrap';
-import {Col} from 'react-bootstrap';
 
 var SingleGameStat = React.createClass({
     render: function() {
