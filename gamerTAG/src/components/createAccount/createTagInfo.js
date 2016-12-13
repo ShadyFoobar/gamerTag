@@ -1,4 +1,5 @@
 import React from 'react';
+import './create.css';
 
 var CreateTagInfo = React.createClass({
     render: function() {

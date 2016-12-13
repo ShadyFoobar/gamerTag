@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './general/navbar';
 import Footer from './general/footer';
+import './app.css'
 
 var App = React.createClass({
     getInitialState: function() {

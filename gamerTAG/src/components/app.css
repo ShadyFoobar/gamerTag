@@ -18,3 +18,11 @@ body{
   background-color: #6E6E6E;
   overflow-y: scroll;
 }
+
+.all-page-layout {
+  background-color: #FAB433;
+  border: solid 2px #F3843E;
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: 80%;
+}

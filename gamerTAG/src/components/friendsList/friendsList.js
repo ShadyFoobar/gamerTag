@@ -3,6 +3,7 @@ import Friend from './friend';
 import 'react-bootstrap';
 import data from '../../data.js';
 import {Row, Col, Grid} from 'react-bootstrap';
+import './friend.css';
 
 var FriendsList = React.createClass({
     getInitialState: function() {

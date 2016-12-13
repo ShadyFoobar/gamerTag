@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import ToggleDisplay from 'react-toggle-display';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import './navbar.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 

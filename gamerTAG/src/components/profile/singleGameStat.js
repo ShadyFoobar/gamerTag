@@ -1,4 +1,5 @@
 import React from 'react';
+import './profile-page.css';
 
 var SingleGameStat = React.createClass({
     render: function() {

@@ -5,6 +5,7 @@ import TagInfo from './tagInfo';
 import AddGame from './addGame';
 import {Row, Col, Grid} from 'react-bootstrap';
 import data from '../../data.js';
+import './profile-page.css';
 
 var ProfilePage = React.createClass({
     getInitialState: function() {

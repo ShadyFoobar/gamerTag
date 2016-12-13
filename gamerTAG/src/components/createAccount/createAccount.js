@@ -2,6 +2,7 @@ import React from 'react';
 import CreateTagInfo from './createTagInfo';
 import {Row, Col} from 'react-bootstrap';
 import {Link} from 'react-router';
+import './create.css';
 
 var CreateAccount = React.createClass({
     render: function() {

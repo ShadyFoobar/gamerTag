@@ -2,7 +2,7 @@ import React from 'react';
 import {Col} from 'react-bootstrap';
 import TextField from 'material-ui/TextField';
 import {orange800} from 'material-ui/styles/colors';
-
+import './profile-page.css';
 
 var TagInfo = React.createClass({
     render: function() {

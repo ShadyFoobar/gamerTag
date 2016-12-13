@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
+import './profile-page.css';
 
 var AddGame = React.createClass({
     render: function() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import SingleGameStat from './singleGameStat';
 import {Row, Col} from 'react-bootstrap';
+import './profile-page.css';
 
 var GameStats = React.createClass({
     render: function() {

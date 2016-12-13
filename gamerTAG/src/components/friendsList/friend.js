@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
+import './friend.css';
 
 var Friend = React.createClass({
     render: function() {

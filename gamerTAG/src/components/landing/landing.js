@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import { Link } from 'react-router';
+import './landing.css';
 
 var Landing = React.createClass({
     render: function() {
