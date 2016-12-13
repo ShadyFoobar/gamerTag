@@ -8,7 +8,7 @@ var Friend = React.createClass({
             <div className="friend">
                 <Row className="show-grid">
                     <Col xs={3} sm={2} md={2} className="friendProfilePic">
-                      <img src={require('../../img/blackSquare.png')} alt="profile-pic"/>
+                      <img src='/images/default_avatar.jpg' alt="profile-pic"/>
                     </Col>
                     <Col xs={9} sm={10} md={10}>
                         <div className="friendData">
