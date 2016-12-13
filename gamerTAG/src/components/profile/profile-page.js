@@ -20,28 +20,20 @@ var ProfilePage = React.createClass({
                 <Grid className="all-page-layout" fluid>
                     <Row className="show-grid profilePageSplit">
                         <Col xs={12}>
-                            <div>
-                                <MyProfileData gamerTAG={this.state.user.gamerTAG} name={this.state.user.name} location={this.state.user.location} status={this.state.user.status} recentGame={this.state.user.recentGame}/>
-                            </div>
+                            <MyProfileData gamerTAG={this.state.user.gamerTAG} name={this.state.user.name} location={this.state.user.location} status={this.state.user.status} recentGame={this.state.user.recentGame}/>
                         </Col>
                     </Row>
                     <Row className="show-grid profilePageSplit">
                         <Col xs={12} sm={6}>
-                            <div>
-                                <AddGame/>
-                            </div>
+                            <AddGame/>
                         </Col>
                         <Col xs={12} sm={6}>
-                            <div>
-                                <TagInfo/>
-                            </div>
+                            <TagInfo/>
                         </Col>
                     </Row>
                     <Row className="show-grid profilePageSplit">
                         <Col xs={12}>
-                            <div>
-                                <GameStats/>
-                            </div>
+                            <GameStats/>
                         </Col>
                     </Row>
                 </Grid>
