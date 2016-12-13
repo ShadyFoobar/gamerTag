@@ -34,20 +34,41 @@ module.exports = {
         ],
         myGames: [
           {
-            name: "1",
-            pic: "pic",
-            skill: "pro"
+            id: 0,
+            title: 'League of Legends',
+            img: 'images/grid-list/league.jpg',
+            skill: "Pro"
           },
           {
-            name: "2",
-            pic: "pic",
-            skill: "pro"
+            id: 1,
+            title: 'Rocket League',
+            img: 'images/grid-list/Rocket-League.jpg',
+            skill: "Pro"
           },
           {
-            name: "3",
-            pic: "pic",
-            skill: "pro"
-          }
+            id: 2,
+            title: 'League of Legends',
+            img: 'images/grid-list/league.jpg',
+            skill: "Noob"
+          },
+          {
+            id: 3,
+            title: 'League of Legends',
+            img: 'images/grid-list/league.jpg',
+            skill: "Pro"
+          },
+          {
+            id: 4,
+            title: 'Rocket League',
+            img: 'images/grid-list/Rocket-League.jpg',
+            skill: "Noob"
+          },
+          {
+            id: 5,
+            title: 'League of Legends',
+            img: 'images/grid-list/league.jpg',
+            skill: "Pro"
+          },
         ]
     },
     allUsers: [

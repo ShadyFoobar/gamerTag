@@ -19,11 +19,6 @@
   margin-right: auto;
 }
 
-.allGameStat {
-  overflow-x: scroll;
-  white-space: nowrap;
-}
-
 .profilePageSplit {
   border: solid 2px #3871BB;
   background: linear-gradient(#F3843E, #FAB433);
