@@ -1,6 +1,5 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
-import './profile-page.css';
 
 var MyProfileData = React.createClass({
     render: function() {

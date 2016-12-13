@@ -1,5 +1,5 @@
 import React from 'react';
-import './profile-page.css';
+import './singleGameStat.css'
 
 var SingleGameStat = React.createClass({
     render: function() {
@@ -7,7 +7,7 @@ var SingleGameStat = React.createClass({
             <div className="singleGameStat">
               <img src='/images/league.jpg' alt="profile-pic" />
               <p>Skill Level</p>
-              <p>Rank</p>
+              <p>Console</p>
             </div>
         )
     }

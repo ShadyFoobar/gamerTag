@@ -1,8 +1,8 @@
 import React from 'react';
 import MyProfileData from './myProfileData';
-import GameStats from './gameStats';
-import TagInfo from './tagInfo';
-import AddGame from './addGame';
+import GameStats from './gameStats/gameStats';
+import TagInfo from './gamerTags/tagInfo';
+import AddGame from './addGame/addGame';
 import {Row, Col, Grid} from 'react-bootstrap';
 import data from '../../data.js';
 import './profile-page.css';

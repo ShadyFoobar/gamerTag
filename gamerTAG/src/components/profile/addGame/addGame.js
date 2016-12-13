@@ -1,13 +1,13 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
-import './profile-page.css';
+// import './profile-page.css';
 
 var AddGame = React.createClass({
     render: function() {
         return (
-            <div>
+              <Row>
                 <Col xs={12} className="singleGameStat">
-                    <div>
+                    <Row>
                         <h2>Add A Game</h2>
                         <Col xs={12} md={6}>
                           <p>Name</p>
@@ -15,11 +15,11 @@ var AddGame = React.createClass({
                             <p>Console</p>
                         </Col>
                         <Col xs={12} md={6}>
-                            <img src='images/league.jpg' alt="profile-pic"/>
+                            <img src='/images/league.jpg' alt="profile-pic"/>
                         </Col>
-                    </div>
+                    </Row>
                 </Col>
-            </div>
+              </Row>
         )
     }
 });
