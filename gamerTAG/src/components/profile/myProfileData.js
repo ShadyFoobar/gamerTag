@@ -10,7 +10,7 @@ var MyProfileData = React.createClass({
                     <h2>Profile</h2>
                     <Col xs={4}>
                         <div className="profilePic">
-                            <img src={require('../../img/blackSquare.png')} alt="profile-pic"/>
+                            <img src='/images/blackSquare.png' alt="profile-pic"/>
                         </div>
                     </Col>
                     <Col xs={4}>
