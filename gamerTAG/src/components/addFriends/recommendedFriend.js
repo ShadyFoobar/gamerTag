@@ -1,10 +1,12 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
+import Paper from 'material-ui/Paper';
 
 var RecommendedFriend = React.createClass({
     render: function() {
         return (
-            <div className="friend">
+            <div>
+              <Paper zDepth={3} className="friend">
                 <Row className="show-grid">
                     <Col xs={12} sm={10} md={10}>
                         <div className="friendData">
@@ -14,6 +16,7 @@ var RecommendedFriend = React.createClass({
                         </div>
                     </Col>
                 </Row>
+              </Paper>
             </div>
         )
     }
