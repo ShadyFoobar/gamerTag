@@ -1,7 +1,3 @@
-.singleGameStat, .myProfileData, .tagSection{
-  display: inline-block;
-}
-
 @media (min-width: 768px) {
   .singleGameStat, .myProfileData, .tagSection{
     padding: 15px 15px;
