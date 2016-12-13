@@ -22,5 +22,8 @@
 
 .profilePageSplit {
   background: linear-gradient(#F3843E, #FAB433);
-  margin: 5px 0px;
+}
+
+.gamertag_input  {
+  max-width: 200px;
 }
