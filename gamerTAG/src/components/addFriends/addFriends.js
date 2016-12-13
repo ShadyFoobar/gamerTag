@@ -21,7 +21,7 @@ var addFriends = React.createClass({
                 </Row>
 
                 <Row className="show-grid">
-                    <Col xs={6}>
+                    <Col xs={12} sm={6}>
                         {this.state.allUsers.filter(function(user, index) {
                             if (index % 2 === 0) {
                                 return user;
@@ -30,7 +30,7 @@ var addFriends = React.createClass({
                             return (<RecommendedFriend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
                         })}
                     </Col>
-                    <Col xs={6}>
+                    <Col xs={12} sm={6}>
                         {this.state.allUsers.filter(function(user, index) {
                             if (index % 2 !== 0) {
                                 return user;
