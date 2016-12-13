@@ -13,8 +13,6 @@ var Navbar = React.createClass({
         return "/"
       }
     },
-
-
     render: function() {
 
         const styles = {
@@ -29,7 +27,7 @@ var Navbar = React.createClass({
         return (
             <div>
               <div className="logoBar">
-                <img src={require('../../img/blackSquare.png')} alt="profile-pic" />
+                <img src={require('../../img/gamerTAG.png')} alt="profile-pic" />
               </div>
               <ToggleDisplay show={this.props.isLoggedIn}>
                 <Tabs style={styles.tabs}>
