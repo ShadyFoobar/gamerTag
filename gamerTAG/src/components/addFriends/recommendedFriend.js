@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 
-var PossibleFriend = React.createClass({
+var RecommendedFriend = React.createClass({
     render: function() {
         return (
             <div className="friend">
@@ -19,4 +19,4 @@ var PossibleFriend = React.createClass({
     }
 });
 
-module.exports = PossibleFriend;
+module.exports = RecommendedFriend;
