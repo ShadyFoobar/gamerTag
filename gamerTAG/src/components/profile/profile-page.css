@@ -1,12 +1,17 @@
 .singleGameStat, .myProfileData, .tagSection{
   display: inline-block;
-  padding: 15px 15px;
+}
+
+@media (min-width: 768px) {
+  .singleGameStat, .myProfileData, .tagSection{
+    padding: 15px 15px;
+  }
 }
 
 .profilePic img {
   width: 100%;
-  max-height: 225px;
-  max-width: 225px;
+  max-height: 200px;
+  max-width: 200px;
   min-height: 100px;
   min-width: 100px;
   display: block;
@@ -20,9 +25,14 @@
 }
 
 .profilePageSplit {
-  padding: 20px 20px;
   border: solid 2px #3871BB;
   background: linear-gradient(#F3843E, #FAB433);
+}
+
+@media (min-width: 768px) {
+  .profilePageSplit {
+    padding: 20px;
+  }
 }
 
 .gamertag_input  {

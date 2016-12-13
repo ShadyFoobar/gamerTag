@@ -26,12 +26,12 @@ var ProfilePage = React.createClass({
                         </Col>
                     </Row>
                     <Row className="show-grid profilePageSplit">
-                        <Col xs={6}>
+                        <Col xs={12} sm={6}>
                             <div>
                                 <AddGame/>
                             </div>
                         </Col>
-                        <Col xs={6}>
+                        <Col xs={12} sm={6}>
                             <div>
                                 <TagInfo/>
                             </div>

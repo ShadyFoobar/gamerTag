@@ -17,7 +17,14 @@ body{
 .all-page-layout {
   background-color: #FAB433;
   border: solid 2px #F3843E;
-  margin-left: 50px;
-  margin-right: 50px;
-  min-height: 80%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+  .all-page-layout {
+    margin-left: 50px;
+    margin-right: 50px;
+    min-height: 80%;
+  }
 }
