@@ -1,5 +1,5 @@
 import React from 'react';
-import Friend from './../friendsList/friend';
+import RecommendedFriend from './../addFriends/recommendedFriend';
 import {Row, Col, Grid} from 'react-bootstrap';
 import data from '../../data.js';
 
@@ -27,7 +27,7 @@ var addFriends = React.createClass({
                                 return user;
                             }
                         }).map(function(user, index) {
-                            return (<Friend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
+                            return (<RecommendedFriend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
                         })}
                     </Col>
                     <Col xs={6}>
@@ -36,7 +36,7 @@ var addFriends = React.createClass({
                                 return user;
                             }
                         }).map(function(user, index) {
-                            return (<Friend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
+                            return (<RecommendedFriend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
                         })}
                     </Col>
                 </Row>
