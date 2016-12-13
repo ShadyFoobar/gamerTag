@@ -13,7 +13,7 @@ var Footer = React.createClass({
             </Col>
             <Col xs={12} sm={4}>
               <div>
-                <img src={require('../../img/gamerTAG.png')} alt="profile-pic" />
+                <img src='/images/gamerTAG.png' alt="logo-pic" />
               </div>
             </Col>
             <Col xs={12} sm={4}>
