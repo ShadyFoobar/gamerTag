@@ -7,9 +7,9 @@
 
 .reccomendedFriend:hover
 {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
 }
 
 .reccomendedFriendProfilePic img{
