@@ -1,5 +1,4 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
 import TextField from 'material-ui/TextField';
 import {orange600} from 'material-ui/styles/colors';
 import './create.css';
@@ -16,7 +15,7 @@ var CreateTagInfo = React.createClass({
       };
         return (
             <div className="createAccount">
-                <FormGroup controlId="tag-name">
+                <div className="form-group">
                   <TextField
                     className=""
                     underlineFocusStyle={styles.underlineStyle}
@@ -25,7 +24,7 @@ var CreateTagInfo = React.createClass({
                     floatingLabelFixed={true}
                     hintText="Enter name"
                   />
-                </FormGroup>
+                </div>
 
                     <label>Play Frequencey</label>
                     <input type="checkbox" name="frequencey" value="weekday"/>Weekdays
