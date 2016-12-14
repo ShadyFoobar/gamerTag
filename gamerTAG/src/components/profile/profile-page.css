@@ -1,5 +1,5 @@
 @media (min-width: 768px) {
-  .singleGameStat, .myProfileData, .tagSection{
+  .myProfileData, .tagSection{
     padding: 15px 15px;
   }
 }
