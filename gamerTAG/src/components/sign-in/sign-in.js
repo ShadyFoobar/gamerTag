@@ -1,28 +1,65 @@
 import React from 'react';
-import {Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 import { Link } from 'react-router';
+import TextField from 'material-ui/TextField';
+import {orange600} from 'material-ui/styles/colors';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+import './sign-in.css'
 
 var SignIn = React.createClass({
     render: function() {
+      var styles = {
+        underlineStyle: {
+          borderColor: orange600,
+        },
+        floatingLabel: {
+          color: orange600
+        }
+      };
         return (
-            <div className="account-sign-in">
+            <Grid className="account-sign-in">
                 <h1>Sign In </h1>
                 <form className="account-information">
-                    <Row className="show-grid">
-                        <Col xs={12}>
+                    {/* <Row>
+                        <Col xs={12}> */}
                             <div className="sign-in-info">
-                                <p>Email</p>
-                                <input type="text"/>
-                                <p>Password</p>
-                                <input type="text"/>
-                                <Link to='/profile-page'><p>Forgot Password</p></Link>
-                                <Link to='/create-account'><p>Don't got a Tag</p></Link>
-                                <Link to='/profile-page'><button type="submit" form="form1" value="Submit">Submit</button></Link>
+                                <TextField
+                                  className="sign-in-email"
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="Email Address"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Email Address"
+                                />
+                                <br/>
+                                <TextField
+                                  className="sign-in-password"
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="Password"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Password"
+                                  type="password"
+                                />
+                                <br/>
+                                <Link to='/profile-page'>
+                                  <RaisedButton type="submit" form="form1" value="Submit" label="Submit" />
+                                </Link>
+                                <br/>
+                                <Link to='/profile-page'>
+                                  <FlatButton label="Forgot Password" />
+                                </Link>
+                                <br/>
+                                <Link to='/create-account'>
+                                  <FlatButton label="Don't got a Tag" />
+                                </Link>
+
                             </div>
-                        </Col>
-                    </Row>
+                        {/* </Col>
+                    </Row> */}
                 </form>
-            </div>
+            </Grid>
         )
     }
 });
