@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid} from 'react-bootstrap';
 import { Link } from 'react-router';
+import { Card } from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import {orange600} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
@@ -15,11 +16,17 @@ var SignIn = React.createClass({
         },
         floatingLabel: {
           color: orange600
+        },
+        card: {
+          maxWidth: '375px',
+          margin: '0 auto',
+          padding: '10px 0',
+          backgroundColor: '#eee'
         }
       };
         return (
-
             <Grid className="account-sign-in ">
+              <Card style={styles.card}>
                 <h1>Sign In </h1>
                 <form className="account-information">
                     <div className="sign-in-info">
@@ -43,7 +50,7 @@ var SignIn = React.createClass({
                         />
                         <br/>
                         <Link to='/profile-page'>
-                          <RaisedButton type="submit" form="form1" value="Submit" label="Submit" />
+                          <RaisedButton type="submit" form="form1" value="Submit" label="Submit" primary={true}/>
                         </Link>
                         <br/>
                         <Link to='/profile-page'>
@@ -56,6 +63,7 @@ var SignIn = React.createClass({
 
                     </div>
                 </form>
+              </Card>
             </Grid>
         )
     }
