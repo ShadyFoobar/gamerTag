@@ -28,7 +28,9 @@ var Navbar = React.createClass({
         return (
             <div className="navbar">
               <div className="logoBar">
-                <img src='/images/gamerTAG.png' alt="profile-pic" />
+                <Link to="/">
+                  <img src='/images/gamerTAG.png' alt="profile-pic" />
+                </Link>
               </div>
               <ToggleDisplay show={this.props.isLoggedIn}>
                 <Tabs style={styles.tabs}>
