@@ -3,6 +3,7 @@
   border: solid 2px #3871BB;
   margin: 10px;
   padding: 0px 5px;
+  will-change: contents;
 }
 
 .reccomendedFriend:hover{
