@@ -1,11 +1,21 @@
 import React from 'react';
 import CreateTagInfo from './createTagInfo';
 import {Grid, Row, Col} from 'react-bootstrap';
+import TextField from 'material-ui/TextField';
+import {orange600} from 'material-ui/styles/colors';
 import {Link} from 'react-router';
 import './create.css';
 
 var CreateAccount = React.createClass({
     render: function() {
+      var styles = {
+        underlineStyle: {
+          borderColor: orange600,
+        },
+        floatingLabel: {
+          color: '#393939'
+        },
+      };
         return (
             <Grid className="account-creation all-page-layout">
                 <h1>Create Account</h1>
@@ -17,14 +27,38 @@ var CreateAccount = React.createClass({
                         <Col xs={12} sm={4}>
                             <div className="user-info">
                                 <h2>User Info</h2>
-                                <p>gamerTAG</p>
-                                <input type="text"/>
-                                <p>Name</p>
-                                <input type="text"/>
-                                <p>Age</p>
-                                <input type="text"/>
-                                <p>Location</p>
-                                <input type="text"/>
+                                <TextField
+                                  className=""
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="gamerTAG"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter gamerTAG"
+                                />
+                                <TextField
+                                  className=""
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="Name"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter name"
+                                />
+                                <TextField
+                                  className=""
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="Age"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter age"
+                                />
+                                <TextField
+                                  className=""
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="Location"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter location"
+                                />
                             </div>
                         </Col>
                         <Col xs={12} sm={8}>
