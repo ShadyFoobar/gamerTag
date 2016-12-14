@@ -14,18 +14,18 @@ var addFriends = React.createClass({
         return (
             <div>
               <Grid className="all-page-layout">
-                <Row className="show-grid">
+                <Row>
                     <Col xs={12} className="recommendedFriendPageHeader">
                         <h1>FIND A FRIEND</h1>
                     </Col>
                 </Row>
 
-                <Row className="show-grid">
+                <Row>
                     <Col xs={12} sm={6}>
                         {this.state.allUsers.filter(function(user, index) {
                             if (index % 2 === 0) {
-                                return user;
-                            }
+                                return true;
+                            } else { return false; }
                         }).map(function(user, index) {
                             return (<RecommendedFriend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
                         })}
@@ -33,8 +33,8 @@ var addFriends = React.createClass({
                     <Col xs={12} sm={6}>
                         {this.state.allUsers.filter(function(user, index) {
                             if (index % 2 !== 0) {
-                                return user;
-                            }
+                                return true;
+                            } else { return false; }
                         }).map(function(user, index) {
                             return (<RecommendedFriend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
                         })}
