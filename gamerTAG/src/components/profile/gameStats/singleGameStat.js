@@ -12,7 +12,7 @@ var SingleGameStat = React.createClass({
             titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
             subtitle={<span>Skill: <b>{this.props.tile.skill}</b></span>}
           >
-              <img src={this.props.tile.img} />
+              <img src={this.props.tile.img} alt={this.props.tile.title}/>
           </GridTile>
         )
     }
