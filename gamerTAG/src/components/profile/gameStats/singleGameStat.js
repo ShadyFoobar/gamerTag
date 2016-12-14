@@ -1,14 +1,19 @@
 import React from 'react';
+import {GridTile} from 'material-ui/GridList';
 import './singleGameStat.css'
 
 var SingleGameStat = React.createClass({
     render: function() {
         return (
-            <div className="singleGameStat">
-              <img src='/images/league.jpg' alt="profile-pic" />
-              <p>Skill Level</p>
-              <p>Console</p>
-            </div>
+          <GridTile
+            className="singleGameStat"
+            key={this.props.tile.id}
+            title={this.props.tile.title}
+            titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
+            subtitle={<span>Skill: <b>{this.props.tile.skill}</b></span>}
+          >
+              <img src={this.props.tile.img} />
+          </GridTile>
         )
     }
 });

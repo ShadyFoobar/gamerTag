@@ -1,4 +1,11 @@
-.allGameStat {
-  /*overflow-x: scroll;
-  white-space: nowrap;*/
+.all-games-grid-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.all-games-grid-list::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.all-games-grid-list::-webkit-scrollbar-thumb {
+  background: #666;
 }
