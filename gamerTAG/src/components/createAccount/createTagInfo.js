@@ -18,7 +18,7 @@ var CreateTagInfo = React.createClass({
             <div className="createAccount">
                 <FormGroup controlId="tag-name">
                   <TextField
-                    className="sign-in-email"
+                    className=""
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelText={this.props.tagName}
                     floatingLabelStyle={styles.floatingLabel}
