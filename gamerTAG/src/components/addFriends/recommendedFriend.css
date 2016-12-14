@@ -5,11 +5,10 @@
   padding: 0px 5px;
 }
 
-.reccomendedFriend:hover
-{
-        -webkit-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        transform: scale(1.02);
+.reccomendedFriend:hover{
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .reccomendedFriendProfilePic img{
@@ -23,4 +22,17 @@
 
 .recommendedFriendPageHeader {
   text-align: center;
+}
+
+#reccomended-friend-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#reccomended-friend-status {
+    font-size: 15px;
+}
+
+#reccomended-friend-recent {
+    font-size: 15px;
 }
