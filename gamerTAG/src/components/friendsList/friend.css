@@ -2,6 +2,8 @@
     background: linear-gradient(#F3843E, #FAB433);
     border: solid 2px #3871BB;
     margin: 10px;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .friend:hover {
