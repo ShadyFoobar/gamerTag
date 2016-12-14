@@ -1,20 +1,20 @@
 import React from 'react';
 import CreateTagInfo from './createTagInfo';
-import {Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 import {Link} from 'react-router';
 import './create.css';
 
 var CreateAccount = React.createClass({
     render: function() {
         return (
-            <div className="account-creation all-page-layout">
+            <Grid className="account-creation all-page-layout">
                 <h1>Create Account</h1>
-                <Link to='/sign-in'>
-                    <p>Already got a Tag?</p>
-                </Link>
+                <p><Link to='/sign-in'>
+                    Already got a Tag?
+                </Link></p>
                 <form className="account-information">
                     <Row className="show-grid">
-                        <Col xs={6}>
+                        <Col xs={12} sm={4}>
                             <div className="user-info">
                                 <h2>User Info</h2>
                                 <p>gamerTAG</p>
@@ -27,7 +27,7 @@ var CreateAccount = React.createClass({
                                 <input type="text"/>
                             </div>
                         </Col>
-                        <Col xs={6}>
+                        <Col xs={12} sm={8}>
                             <div className="game-info">
                                 <h2>Game Info</h2>
                                 <CreateTagInfo tagName="Battle.net Tag"/>
@@ -43,7 +43,7 @@ var CreateAccount = React.createClass({
                         <button type="button" className="btn btn-primary">Join!</button>
                     </Link>
                 </div>
-            </div>
+            </Grid>
         )
     }
 });
