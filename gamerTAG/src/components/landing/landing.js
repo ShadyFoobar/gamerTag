@@ -6,12 +6,15 @@ import './landing.css';
 var Landing = React.createClass({
     render: function() {
         return (
-            <div className="account-creation">
+            <div className="account-creation all-page-layout">
                 <form className="account-information">
                     <Row className="show-grid">
-                        <Col xs={12}>
+                        <Col xs={8} xsOffset={2}>
                             <div className="app-description">
-                                <p>About App</p>
+                                <p>
+                                  GAMERTAG is the way to link gamers who what to share their experience of playing awesome video games they are currently into.
+                                  Whether you want to casual or go balls to the walls, we will find other gamers with a similar skill level and game preferences as you.
+                                </p>
                             </div>
 
                         </Col>

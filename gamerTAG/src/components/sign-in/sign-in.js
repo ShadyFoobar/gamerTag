@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 var SignIn = React.createClass({
     render: function() {
         return (
-            <div className="account-sign-in">
+            <div className="account-sign-in all-page-layout">
                 <h1>Sign In </h1>
                 <form className="account-information">
                     <Row className="show-grid">

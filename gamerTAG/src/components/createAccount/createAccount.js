@@ -7,7 +7,7 @@ import './create.css';
 var CreateAccount = React.createClass({
     render: function() {
         return (
-            <div className="account-creation">
+            <div className="account-creation all-page-layout">
                 <h1>Create Account</h1>
                 <Link to='/sign-in'>
                     <p>Already got a Tag?</p>

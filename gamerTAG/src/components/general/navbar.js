@@ -26,7 +26,7 @@ var Navbar = React.createClass({
          }
         }
         return (
-            <div>
+            <div className="navbar">
               <div className="logoBar">
                 <img src='/images/gamerTAG.png' alt="profile-pic" />
               </div>

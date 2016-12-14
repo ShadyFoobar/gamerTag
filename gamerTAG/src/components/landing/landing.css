@@ -4,6 +4,8 @@
 
 .app-description {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .sign-up-button button, .sign-in-button button{
