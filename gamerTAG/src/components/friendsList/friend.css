@@ -11,8 +11,9 @@
 }
 
 .friendProfilePic img {
-    width: 100%;
+    /*width: 100%;*/
     height: auto;
+    max-height: 110px;
 }
 
 .friendData {
@@ -28,7 +29,7 @@
 }
 
 #friend-status {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #friend-recent {
