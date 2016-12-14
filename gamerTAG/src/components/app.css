@@ -10,13 +10,15 @@ grey: #6E6E6E
 
 
 body{
-  background-color: #6E6E6E;
+  background-color: #111;
+  color: #6e6e6e;
   overflow-y: scroll;
 }
 
 .all-page-layout {
   background: linear-gradient(#FAB433, #F3843E );
   border: solid 2px #F3843E;
+  color: #333;
 }
 
 @media (min-width: 768px) {
