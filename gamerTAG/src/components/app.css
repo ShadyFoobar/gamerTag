@@ -17,14 +17,10 @@ body{
 .all-page-layout {
   background: linear-gradient(#FAB433, #F3843E );
   border: solid 2px #F3843E;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 @media (min-width: 768px) {
   .all-page-layout {
-    margin-left: 50px;
-    margin-right: 50px;
     min-height: calc(100vh - 200px);
   }
 }
