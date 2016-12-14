@@ -1,8 +1,10 @@
+.reccomendedFriendPaper {
+  margin: 10px;
+}
+
 .reccomendedFriend {
   background: linear-gradient(#F3843E, #FAB433);
   border: solid 2px #3871BB;
-  margin: 10px;
-  padding: 0px 5px;
 }
 
 .reccomendedFriend:hover{

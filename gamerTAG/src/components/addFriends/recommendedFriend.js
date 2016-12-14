@@ -7,13 +7,16 @@ var RecommendedFriend = React.createClass({
     render: function() {
         return (
             <div>
-              <Paper zDepth={3} className="reccomendedFriend">
-                <Row className="show-grid">
-                    <Col xs={12} sm={10} md={10}>
+              <Paper zDepth={3} className="reccomendedFriendPaper">
+                <Row className="show-grid reccomendedFriend">
+                    <Col xs={12}>
                         <div className="friendData">
                           <Row>
-                            <Col xs={12} id="reccomended-friend-name">
+                            <Col xs={10} id="reccomended-friend-name">
                               <p>{this.props.friendName}</p>
+                            </Col>
+                            <Col xs={2}>
+                              <p>+</p>
                             </Col>
                           </Row>
                           <Row>
