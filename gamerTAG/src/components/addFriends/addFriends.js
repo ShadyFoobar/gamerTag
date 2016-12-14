@@ -13,7 +13,7 @@ var addFriends = React.createClass({
     render: function() {
         return (
             <div>
-              <Grid className="all-page-layout" fluid>
+              <Grid className="all-page-layout">
                 <Row className="show-grid">
                     <Col xs={12} className="recommendedFriendPageHeader">
                         <h1>FIND A FRIEND</h1>

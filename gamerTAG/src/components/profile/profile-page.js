@@ -17,7 +17,7 @@ var ProfilePage = React.createClass({
     render: function() {
         return (
             <div>
-                <Grid className="all-page-layout" fluid>
+                <Grid className="all-page-layout">
                     <Row className="show-grid profilePageSplit">
                         <Col xs={12}>
                             <MyProfileData gamerTAG={this.state.user.gamerTAG} name={this.state.user.name} location={this.state.user.location} status={this.state.user.status} recentGame={this.state.user.recentGame}/>
