@@ -31,7 +31,7 @@ var ProfilePage = React.createClass({
                             <GamerTagInfo/>
                         </Col>
                     </Row>
-                    <Row className="show-grid profilePageSplit">
+                    <Row className="show-grid profilePageSplit bottomPageSplit">
                         <Col xs={12}>
                             <GameStats/>
                         </Col>

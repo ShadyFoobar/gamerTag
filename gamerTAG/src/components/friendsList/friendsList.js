@@ -17,8 +17,8 @@ var FriendsList = React.createClass({
             <div >
                 <Grid className="all-page-layout" fluid>
                     <Row className="show-grid">
-                        <Col xs={12}>
-                              <h1>Friends List</h1>
+                        <Col xs={12} className="friendsPageHeader">
+                              <h1>FRIENDS LIST</h1>
                         </Col>
                     </Row>
                     <Row className="show-grid">
