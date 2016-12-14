@@ -14,6 +14,7 @@ var Landing = React.createClass({
                                 <p>
                                   GAMERTAG is the way to link gamers who what to share their experience of playing awesome video games they are currently into.
                                   Whether you want to casual or go balls to the walls, we will find other gamers with a similar skill level and game preferences as you.
+                                  
                                 </p>
                             </div>
 

@@ -1,14 +1,8 @@
-.sign-up-button {
-  text-align: right;
+.account-creation {
+  min-height: calc(100vh - 300px);
 }
-
 .app-description {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.sign-up-button button, .sign-in-button button{
-  width:60%;
-  height:60%;
 }
