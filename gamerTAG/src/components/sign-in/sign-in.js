@@ -19,7 +19,7 @@ var SignIn = React.createClass({
       };
         return (
 
-            <Grid className="account-sign-in all-page-layout">
+            <Grid className="account-sign-in ">
                 <h1>Sign In </h1>
                 <form className="account-information">
                     <div className="sign-in-info">
