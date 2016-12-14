@@ -5,6 +5,13 @@
   padding: 0px 5px;
 }
 
+.reccomendedFriend:hover
+{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+
 .reccomendedFriendProfilePic img{
   width: 100%;
   max-height: 100px;
