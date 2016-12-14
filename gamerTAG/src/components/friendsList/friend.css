@@ -26,12 +26,5 @@
 
 #friend-name {
     font-size: 20px;
-}
-
-#friend-status {
-    font-size: 15px;
-}
-
-#friend-recent {
-    font-size: 15px;
+    font-weight: bold;
 }
