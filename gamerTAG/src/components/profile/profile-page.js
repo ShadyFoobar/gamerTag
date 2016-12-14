@@ -1,6 +1,6 @@
 import React from 'react';
 import MyProfileData from './myProfileData';
-import GameStats from './gameStats/gameStats';
+import AllGameStats from './gameStats/allGameStats';
 import GamerTagInfo from './gamerTagInfo/gamerTagInfo';
 import AddGame from './addGame/addGame';
 import {Row, Col, Grid} from 'react-bootstrap';
@@ -33,7 +33,7 @@ var ProfilePage = React.createClass({
                     </Row>
                     <Row className="show-grid profilePageSplit bottomPageSplit">
                         <Col xs={12}>
-                            <GameStats/>
+                            <AllGameStats/>
                         </Col>
                     </Row>
                 </Grid>

@@ -18,7 +18,7 @@ var styles = {
   },
 };
 
-var GameStats = React.createClass({
+var AllGameStats = React.createClass({
     render: function() {
         return (
             <Row>
@@ -52,4 +52,4 @@ var GameStats = React.createClass({
     }
 });
 
-module.exports = GameStats;
+module.exports = AllGameStats;
