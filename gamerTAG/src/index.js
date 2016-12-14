@@ -10,10 +10,11 @@ import ProfilePage from './components/profile/profile-page';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import { orange600 } from 'material-ui/styles/colors';
+import { amber800, orange600 } from 'material-ui/styles/colors';
 
 const muiTheme = getMuiTheme({
  palette: {
+   primary1Color: amber800,
    accent1Color: orange600,
  },
  appBar: {

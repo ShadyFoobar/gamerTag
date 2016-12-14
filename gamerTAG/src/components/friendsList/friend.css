@@ -1,29 +1,36 @@
 .friend {
-  background: linear-gradient(#F3843E, #FAB433);
-  border: solid 2px #3871BB;
-  margin: 10px;
+    background: linear-gradient(#F3843E, #FAB433);
+    border: solid 2px #3871BB;
+    margin: 10px;
 }
 
-.friend:hover
-{
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
+.friend:hover {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
 }
 
-.friendProfilePic img{
-  width: 100%;
-  max-height: 100px;
-  max-width: 100px;
-  min-height: 100px;
-  min-width: 100px;
-  display: block;
+.friendProfilePic img {
+    width: 100%;
+    height: auto;
 }
 
 .friendData {
-  padding: 5px;
+    padding: 5px;
 }
 
 .friendsPageHeader {
-  text-align: center;
+    text-align: center;
+}
+
+#friend-name {
+    font-size: 20px;
+}
+
+#friend-status {
+    font-size: 20px;
+}
+
+#friend-recent {
+    font-size: 15px;
 }

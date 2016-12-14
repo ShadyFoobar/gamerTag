@@ -1,6 +1,12 @@
-.account-sign-in  {
-  margin: 0 auto;
+.account-sign-in h1 {
+  text-align: center;
+}
+
+.account-information  {
+  /*margin: 0 auto;*/
+  /*display: inline-block;*/
+  text-align: center;
 }
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #6E6E6E inset;
+    -webkit-box-shadow: 0 0 0px 1000px #eee inset;
 }
