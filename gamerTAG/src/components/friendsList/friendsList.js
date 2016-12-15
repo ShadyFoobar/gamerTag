@@ -48,14 +48,14 @@ var FriendsList = React.createClass({
                     <Row>
                         <Col xs={6} className="friendMenu">
                             <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
-                                <MenuItem value={5} primaryText="A-Z"/>
-                                <MenuItem value={6} primaryText="Z-A"/>
+                                <MenuItem value={"alphAZ"} primaryText="A-Z"/>
+                                <MenuItem value={"alphZA"} primaryText="Z-A"/>
                             </SelectField>
                         </Col>
                         <Col xs={6} className="friendMenu">
                             <SelectField floatingLabelText="Status" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
-                                <MenuItem value={7} primaryText="Online"/>
-                                <MenuItem value={8} primaryText="Offline"/>
+                                <MenuItem value={"online"} primaryText="Online"/>
+                                <MenuItem value={"offline"} primaryText="Offline"/>
                             </SelectField>
                         </Col>
                     </Row>
