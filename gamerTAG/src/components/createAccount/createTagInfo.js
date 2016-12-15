@@ -10,7 +10,7 @@ var CreateTagInfo = React.createClass({
           borderColor: orange600,
         },
         floatingLabel: {
-          color: '#393939'
+          color: orange600,
         },
       };
         return (
@@ -25,22 +25,6 @@ var CreateTagInfo = React.createClass({
                     hintText="Enter name"
                   />
                 </div>
-
-                    <label>Play Frequencey</label>
-                    <input type="checkbox" name="frequencey" value="weekday"/>Weekdays
-                    <input type="checkbox" name="frequencey" value="weekend"/>Weekends
-                    <br/>
-                    <input type="radio" name="frequencey" value="hours"/>0-3 Hours
-                    <input type="radio" name="frequencey" value="hours"/>3-5 Hours
-                    <input type="radio" name="frequencey" value="hours"/>5+ Hours
-
-                    <p>Skill Level</p>
-                    <input type="radio" name="skill" value="skilled"/>
-                    Skilled
-                    <input type="radio" name="skill" value="average"/>
-                    Average
-                    <input type="radio" name="skill" value="newbie"/>
-                    Newbie
             </div>
         )
     }

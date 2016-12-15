@@ -1,11 +1,13 @@
-.user-info {
-  text-align: right;
+.user-info .tag-info{
+  text-align: center;
+  padding: 10px;
 }
 
-.user-info input {
-  text-align: right;
-}
 
 .join-button button {
   text-align: center;
+}
+
+.account-creation{
+    text-align: center;
 }
