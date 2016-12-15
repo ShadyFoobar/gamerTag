@@ -76,7 +76,7 @@ module.exports = {
             gamerTAG: "THE NAME",
             name: "Nic T",
             location: "STL",
-            status: "Online",
+            status: "Offline",
             recentGame: "Overwatch"
         }, {
             gamerTAG: "BLITZMAN",
@@ -112,7 +112,7 @@ module.exports = {
             gamerTAG: "the one dude austin",
             name: "Nic B",
             location: "STL",
-            status: "Online",
+            status: "Offline",
             recentGame: "Overwatch"
         }, {
             gamerTAG: "ahse",
