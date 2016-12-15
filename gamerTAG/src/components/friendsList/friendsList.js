@@ -7,7 +7,7 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import './friend.css';
-import {sortFriends} from './sortingFunctions';
+import {sortFriends} from '../general/sortingFunctions';
 
 var FriendsList = React.createClass({
     getInitialState: function() {

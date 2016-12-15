@@ -4,6 +4,7 @@ import {Row, Col, Grid} from 'react-bootstrap';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import {sortFriends} from '../general/sortingFunctions';
 import data from '../../data.js';
 
 var addFriends = React.createClass({
@@ -15,6 +16,16 @@ var addFriends = React.createClass({
     },
     handleChange: function(event, index, value) {
         this.setState({value});
+        this.sortBy(value);
+    },
+    sortBy: function(value) {
+        var sorted = this.state.allUsers;
+        sortFriends(sorted, value);
+        this.setState({
+            user: {
+                friends: sortFriends(sorted, value)
+            }
+        });
     },
     render: function() {
         const styles = {
@@ -41,8 +52,8 @@ var addFriends = React.createClass({
                         </Col>
                         <Col xs={4} className="friendMenu">
                             <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
-                                    <MenuItem value={5} primaryText="Ascending"/>
-                                    <MenuItem value={6} primaryText="Descending"/>
+                                    <MenuItem value={5} primaryText="A-Z"/>
+                                    <MenuItem value={6} primaryText="Z-A"/>
                             </SelectField>
                         </Col>
                         <Col xs={4} className="friendMenu">
