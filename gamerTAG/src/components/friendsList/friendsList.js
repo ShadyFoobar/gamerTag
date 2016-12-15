@@ -20,9 +20,7 @@ var FriendsList = React.createClass({
         this.setState({
           value: value
         });
-        console.log("calling sortBy with value", this.state.value)
         this.sortBy(value);
-        console.log("friends", this.state.user.friends)
     },
     sortBy: function(value) {
         var sorted = this.state.user.friends;
@@ -48,21 +46,13 @@ var FriendsList = React.createClass({
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={4} className="friendMenu">
-                            <SelectField floatingLabelText="Console" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
-                                <MenuItem value={1} primaryText="Xbox"/>
-                                <MenuItem value={2} primaryText="PC"/>
-                                <MenuItem value={3} primaryText="PlayStation"/>
-                                <MenuItem value={4} primaryText="Nintendo"/>
-                            </SelectField>
-                        </Col>
-                        <Col xs={4} className="friendMenu">
+                        <Col xs={6} className="friendMenu">
                             <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
                                 <MenuItem value={5} primaryText="A-Z"/>
                                 <MenuItem value={6} primaryText="Z-A"/>
                             </SelectField>
                         </Col>
-                        <Col xs={4} className="friendMenu">
+                        <Col xs={6} className="friendMenu">
                             <SelectField floatingLabelText="Status" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
                                 <MenuItem value={7} primaryText="Online"/>
                                 <MenuItem value={8} primaryText="Offline"/>
