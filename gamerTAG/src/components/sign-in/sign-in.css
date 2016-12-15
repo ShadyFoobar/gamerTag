@@ -1,10 +1,12 @@
+.account-sign-in {
+  min-height: calc(100vh - 300px);
+}
+
 .account-sign-in h1 {
   text-align: center;
 }
 
 .account-information  {
-  /*margin: 0 auto;*/
-  /*display: inline-block;*/
   text-align: center;
 }
 input:-webkit-autofill {

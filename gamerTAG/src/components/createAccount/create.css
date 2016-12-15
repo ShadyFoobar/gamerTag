@@ -10,4 +10,5 @@
 
 .account-creation{
     text-align: center;
+    min-height: calc(100vh - 300px);
 }
