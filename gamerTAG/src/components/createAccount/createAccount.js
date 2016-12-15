@@ -12,6 +12,9 @@ import './create.css';
 var CreateAccount = React.createClass({
   render: function() {
     var styles = {
+      blurFix: {
+        willChange: 'contents'
+      },
       underlineStyle: {
         borderColor: orange600,
       },
@@ -35,7 +38,7 @@ var CreateAccount = React.createClass({
                             <div className="user-info">
                                 <h2>User Info</h2>
                                 <TextField
-                                  className=""
+                                  style={styles.blurFix}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="gamerTAG"
                                   floatingLabelStyle={styles.floatingLabel}
@@ -43,7 +46,7 @@ var CreateAccount = React.createClass({
                                   hintText="Enter gamerTAG"
                                 />
                                 <TextField
-                                  className=""
+                                  style={styles.blurFix}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Name"
                                   floatingLabelStyle={styles.floatingLabel}
@@ -51,7 +54,7 @@ var CreateAccount = React.createClass({
                                   hintText="Enter name"
                                 />
                                 <TextField
-                                  className=""
+                                  style={styles.blurFix}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Age"
                                   floatingLabelStyle={styles.floatingLabel}
@@ -59,7 +62,7 @@ var CreateAccount = React.createClass({
                                   hintText="Enter age"
                                 />
                                 <TextField
-                                  className=""
+                                  style={styles.blurFix}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Location"
                                   floatingLabelStyle={styles.floatingLabel}
@@ -67,7 +70,7 @@ var CreateAccount = React.createClass({
                                   hintText="Enter location"
                                 />
                                 <TextField
-                                  className=""
+                                  style={styles.blurFix}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Password"
                                   floatingLabelStyle={styles.floatingLabel}
@@ -75,7 +78,7 @@ var CreateAccount = React.createClass({
                                   hintText="Enter Password"
                                 />
                                 <TextField
-                                  className=""
+                                  style={styles.blurFix}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Retype Password"
                                   floatingLabelStyle={styles.floatingLabel}

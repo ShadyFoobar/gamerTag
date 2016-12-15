@@ -6,6 +6,9 @@ import './create.css';
 var CreateTagInfo = React.createClass({
     render: function() {
       var styles = {
+        blurFix: {
+          willChange: 'contents'
+        },
         underlineStyle: {
           borderColor: orange600,
         },
@@ -17,7 +20,7 @@ var CreateTagInfo = React.createClass({
             <div className="createAccount">
                 <div className="form-group">
                   <TextField
-                    className=""
+                    style={styles.blurFix}
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelText={this.props.tagName}
                     floatingLabelStyle={styles.floatingLabel}

@@ -11,6 +11,9 @@ import './sign-in.css'
 var SignIn = React.createClass({
     render: function() {
       var styles = {
+        blurFix: {
+          willChange: 'contents'
+        },
         underlineStyle: {
           borderColor: orange600,
         },
@@ -31,6 +34,7 @@ var SignIn = React.createClass({
                 <form className="account-information">
                     <div className="sign-in-info">
                         <TextField
+                          style={styles.blurFix}
                           className="sign-in-email"
                           underlineFocusStyle={styles.underlineStyle}
                           floatingLabelText="Email Address"
@@ -40,6 +44,7 @@ var SignIn = React.createClass({
                         />
                         <br/>
                         <TextField
+                          style={styles.blurFix}
                           className="sign-in-password"
                           underlineFocusStyle={styles.underlineStyle}
                           floatingLabelText="Password"
