@@ -16,8 +16,7 @@ body{
 }
 
 .all-page-layout {
-  background: linear-gradient(#FAB433, #F3843E );
-  border: solid 2px #F3843E;
+  background-color: white;
   color: #333;
 }
 

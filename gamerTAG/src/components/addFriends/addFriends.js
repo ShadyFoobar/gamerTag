@@ -5,6 +5,8 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import {sortFriends} from '../general/sortingFunctions';
+import {Card} from 'material-ui/Card';
+import {orange600} from 'material-ui/styles/colors';
 import data from '../../data.js';
 
 var addFriends = React.createClass({
@@ -31,11 +33,20 @@ var addFriends = React.createClass({
         const styles = {
             customWidth: {
                 width: 150
-            }
+            },
+            card: {
+                maxWidth: '10000px',
+                margin: '0 auto',
+                padding: '10px 0',
+                backgroundColor: '#eee'
+            },
+            floatingLabel: {
+              color: orange600
+            },
         };
         return (
-            <div>
-                <Grid className="all-page-layout">
+            <Grid>
+                <Card style={styles.card}>
                     <Row>
                         <Col xs={12} className="recommendedFriendPageHeader">
                             <h1>- FIND A FRIEND -</h1>
@@ -43,21 +54,21 @@ var addFriends = React.createClass({
                     </Row>
                     <Row>
                         <Col xs={4} className="friendMenu">
-                            <SelectField floatingLabelText="Game" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
-                                    <MenuItem value={"gameAZ"} primaryText="A-Z"/>
-                                    <MenuItem value={"gameZA"} primaryText="Z-A"/>
+                            <SelectField floatingLabelText="Game" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                                <MenuItem value={"gameAZ"} primaryText="A-Z"/>
+                                <MenuItem value={"gameZA"} primaryText="Z-A"/>
                             </SelectField>
                         </Col>
                         <Col xs={4} className="friendMenu">
-                            <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
-                                    <MenuItem value={"alphAZ"} primaryText="A-Z"/>
-                                    <MenuItem value={"alphZA"} primaryText="Z-A"/>
+                            <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                                <MenuItem value={"alphAZ"} primaryText="A-Z"/>
+                                <MenuItem value={"alphZA"} primaryText="Z-A"/>
                             </SelectField>
                         </Col>
                         <Col xs={4} className="friendMenu">
-                            <SelectField floatingLabelText="Status" value={this.state.value} onChange={this.handleChange} style={styles.customWidth}>
-                                    <MenuItem value={"online"} primaryText="Online"/>
-                                    <MenuItem value={"offline"} primaryText="Offline"/>
+                            <SelectField floatingLabelText="Status" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                                <MenuItem value={"online"} primaryText="Online"/>
+                                <MenuItem value={"offline"} primaryText="Offline"/>
                             </SelectField>
                         </Col>
                     </Row>
@@ -86,8 +97,8 @@ var addFriends = React.createClass({
                             })}
                         </Col>
                     </Row>
-                </Grid>
-            </div>
+                </Card>
+            </Grid>
         )
     }
 });

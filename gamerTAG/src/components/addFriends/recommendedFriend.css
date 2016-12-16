@@ -1,8 +1,7 @@
 .reccomendedFriend {
-  background: transparent;
+  background: linear-gradient(#FAB433, #F3843E );
   box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 30px, rgba(0, 0, 0, 0.227451) 0px 6px 10px;
-  border: solid 2px #3871BB;
-  margin: 5px;
+  margin: 10px;
   will-change: contents;
 }
 
