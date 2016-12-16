@@ -5,7 +5,7 @@ module.exports = {
         location: "STL",
         status: "Online",
         recentGame: "Overwatch",
-        gameData: {
+        gametag: {
             battlenet: "Prodigy",
             league: "Shady Foobar",
             xbox: "TOPGUNCHIEF14",

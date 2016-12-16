@@ -8,6 +8,9 @@ import data from '../../data.js';
 import {Card} from 'material-ui/Card';
 import {orange600} from 'material-ui/styles/colors';
 import {CardMedia, CardTitle} from 'material-ui/Card';
+import {GridList} from 'material-ui/GridList';
+import tilesData from '../../data';
+import SingleGameStat from './gameStats/singleGameStat';
 import './profile-page.css';
 
 var ProfilePage = React.createClass({
@@ -30,7 +33,17 @@ var ProfilePage = React.createClass({
             },
             floatingLabel: {
                 color: orange600
-            }
+            },
+            root: {
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'space-around',
+            },
+            gridList: {
+              display: 'flex',
+              flexWrap: 'nowrap',
+              overflowX: 'auto',
+            },
         };
         return (
                 <Grid>
@@ -56,13 +69,13 @@ var ProfilePage = React.createClass({
                             <Col xs={12} sm={4}>
                                 <div>
                                     <p>
-                                        <strong>Name</strong>: {this.state.user.name}
+                                        <strong>Name: </strong> {this.state.user.name}
                                     </p>
                                     <p>
-                                        <strong>Location</strong>: {this.state.user.location}
+                                        <strong>Location: </strong> {this.state.user.location}
                                     </p>
                                     <p>
-                                        <strong>Status</strong>: {this.state.user.status}
+                                        <strong>Status: </strong> {this.state.user.status}
                                     </p>
                                 </div>
                             </Col>
@@ -70,22 +83,22 @@ var ProfilePage = React.createClass({
                                 <Row>
                                     <Col sm={12}>
                                         <div>
-                                            <p><strong>LoL Summoner Name</strong></p>
+                                            <p><strong>LoL Summoner Name: </strong> {this.state.user.gametag.league}</p>
                                         </div>
                                     </Col>
                                     <Col sm={12}>
                                         <div>
-                                            <p><strong>Blizzard BattleTag</strong></p>
+                                            <p><strong>Blizzard BattleTag: </strong> {this.state.user.gametag.battlenet}</p>
                                         </div>
                                     </Col>
                                     <Col sm={12}>
                                         <div>
-                                            <p><strong>Xbox Gamertag</strong></p>
+                                            <p><strong>Xbox Gamertag: </strong> {this.state.user.gametag.xbox}</p>
                                         </div>
                                     </Col>
                                     <Col sm={12}>
                                         <div>
-                                            <p><strong>Playstation UserName</strong></p>
+                                            <p><strong>Playstation UserName</strong> {this.state.user.gametag.playstation}</p>
                                         </div>
                                     </Col>
                                 </Row>
@@ -93,7 +106,20 @@ var ProfilePage = React.createClass({
                         </Row>
                         <Row className="show-grid">
                             <Col xs={12}>
-                                <AllGameStats/>
+                              <Row>
+                                  <Col xs={12}>
+                                      <div className="gameHeader">
+                                          <h2>My Games</h2>
+                                      </div>
+                                      <div className="allGameStat" style={styles.root}>
+                                        <GridList className="all-games-grid-list" style={styles.gridList} cols={2.2}>
+                                          {tilesData.user.myGames.map((tile, index) => (
+                                            <SingleGameStat tile={tile} index={index} key={tile.id}/>
+                                          ))}
+                                        </GridList>
+                                      </div>
+                                  </Col>
+                              </Row>
                             </Col>
                         </Row>
                     </Card>
