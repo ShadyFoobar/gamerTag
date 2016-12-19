@@ -35,95 +35,133 @@ var ProfilePage = React.createClass({
                 color: orange600
             },
             root: {
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-around',
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-around'
             },
             gridList: {
-              display: 'flex',
-              flexWrap: 'nowrap',
-              overflowX: 'auto',
-            },
+                display: 'flex',
+                flexWrap: 'nowrap',
+                overflowX: 'auto'
+            }
         };
         return (
-                <Grid>
-                    <Card style={styles.card}>
-                        <Row className="show-grid profilePageHeader">
-                            <Col xs={12} className="">
-                                <h1>- My Profile -</h1>
-                            </Col>
-                        </Row>
-                        <Row className="profilePageInfo">
-                            <Col xs={12} sm={4}>
-                                <div className="profilePic">
-                                  <CardMedia
-                                    overlay={<CardTitle
-                                      title={this.props.gamerTAG}
-                                      subtitle="Pro"
-                                      style={styles.cardTitle} />}
-                                   >
+            <Grid>
+                <Card style={styles.card}>
+                    <Row className="show-grid profilePageHeader">
+                        <Col xs={12} className="">
+                            <h1>- My Profile -</h1>
+                        </Col>
+                    </Row>
+                    <Row className="profilePageInfo">
+                        <Col xs={12} sm={4}>
+                            <div className="profilePic">
+                                <CardMedia overlay={< CardTitle title={
+                                    this.props.gamerTAG
+                                }
+                                subtitle="Pro" style={
+                                    styles.cardTitle
+                                } />}>
                                     <img src='/images/default_avatar.jpg' alt="profile-pic"/>
-                                  </CardMedia>
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={4}>
-                                <div>
-                                    <p>
-                                        <strong>Name: </strong> {this.state.user.name}
-                                    </p>
-                                    <p>
-                                        <strong>Location: </strong> {this.state.user.location}
-                                    </p>
-                                    <p>
-                                        <strong>Status: </strong> {this.state.user.status}
-                                    </p>
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={4}>
-                                <Row>
-                                    <Col sm={12}>
-                                        <div>
-                                            <p><strong>LoL Summoner Name: </strong> {this.state.user.gametag.league}</p>
-                                        </div>
-                                    </Col>
-                                    <Col sm={12}>
-                                        <div>
-                                            <p><strong>Blizzard BattleTag: </strong> {this.state.user.gametag.battlenet}</p>
-                                        </div>
-                                    </Col>
-                                    <Col sm={12}>
-                                        <div>
-                                            <p><strong>Xbox Gamertag: </strong> {this.state.user.gametag.xbox}</p>
-                                        </div>
-                                    </Col>
-                                    <Col sm={12}>
-                                        <div>
-                                            <p><strong>Playstation UserName</strong> {this.state.user.gametag.playstation}</p>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                        <Row className="show-grid profilePageGames">
-                            <Col xs={12}>
-                              <Row>
-                                  <Col xs={12}>
-                                      <div className="profilePageGamesHeader">
-                                          <h3>- My Games -</h3>
-                                      </div>
-                                      <div className="allGameStat" style={styles.root}>
+                                </CardMedia>
+                            </div>
+                        </Col>
+                        <Col xs={12} sm={4}>
+                            <Row>
+                                <Col sm={12} className="sectionHeader">
+                                    <div>
+                                        <h3>- Personal Info -</h3>
+                                    </div>
+                                </Col>
+                                <Col sm={12} className="sectionInfo">
+                                    <div>
+                                        <p>
+                                            <strong>Name:
+                                            </strong>
+                                            {this.state.user.name}
+                                        </p>
+                                    </div>
+                                </Col>
+                                <Col sm={12} className="sectionInfo">
+                                    <div>
+                                        <p>
+                                            <strong>Location:
+                                            </strong>
+                                            {this.state.user.location}
+                                        </p>
+                                    </div>
+                                </Col>
+                                <Col sm={12} className="sectionInfo">
+                                    <div>
+                                        <p>
+                                            <strong>Status:
+                                            </strong>
+                                            {this.state.user.status}
+                                        </p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col xs={12} sm={4}>
+                            <Row>
+                                <Col sm={12} className="sectionHeader">
+                                    <div>
+                                        <h3>- Tag Info -</h3>
+                                    </div>
+                                </Col>
+                                <Col sm={12} className="sectionInfo">
+                                    <div>
+                                        <p>
+                                            <strong>LoL Summoner Name:
+                                            </strong>
+                                            {this.state.user.gametag.league}</p>
+                                    </div>
+                                </Col>
+                                <Col sm={12} className="sectionInfo">
+                                    <div>
+                                        <p>
+                                            <strong>Blizzard BattleTag:
+                                            </strong>
+                                            {this.state.user.gametag.battlenet}</p>
+                                    </div>
+                                </Col>
+                                <Col sm={12} className="sectionInfo">
+                                    <div>
+                                        <p>
+                                            <strong>Xbox Gamertag:
+                                            </strong>
+                                            {this.state.user.gametag.xbox}</p>
+                                    </div>
+                                </Col>
+                                <Col sm={12} className="sectionInfo">
+                                    <div>
+                                        <p>
+                                            <strong>Playstation UserName:
+                                            </strong>
+                                            {this.state.user.gametag.playstation}</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                    <Row className="show-grid profilePageGames">
+                        <Col xs={12}>
+                            <Row>
+                                <Col xs={12}>
+                                    <div className="profilePageGamesHeader">
+                                        <h3>- My Games -</h3>
+                                    </div>
+                                    <div className="allGameStat" style={styles.root}>
                                         <GridList className="all-games-grid-list" style={styles.gridList} cols={2.2}>
-                                          {tilesData.user.myGames.map((tile, index) => (
-                                            <SingleGameStat tile={tile} index={index} key={tile.id}/>
-                                          ))}
+                                            {tilesData.user.myGames.map((tile, index) => (<SingleGameStat tile={tile} index={index} key={tile.id}/>))}
                                         </GridList>
-                                      </div>
-                                  </Col>
-                              </Row>
-                            </Col>
-                        </Row>
-                    </Card>
-                </Grid>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Card>
+            </Grid>
         )
     }
 });

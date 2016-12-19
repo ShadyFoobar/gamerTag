@@ -14,3 +14,16 @@
 .profilePageGamesHeader {
   text-align: center;
 }
+
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionInfo {
+    text-align: center;
+  }
+}
