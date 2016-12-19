@@ -48,12 +48,12 @@ var ProfilePage = React.createClass({
         return (
                 <Grid>
                     <Card style={styles.card}>
-                        <Row className="show-grid">
-                            <Col xs={12} className="profilePageHeader">
+                        <Row className="show-grid profilePageHeader">
+                            <Col xs={12} className="">
                                 <h1>- My Profile -</h1>
                             </Col>
                         </Row>
-                        <Row>
+                        <Row className="profilePageInfo">
                             <Col xs={12} sm={4}>
                                 <div className="profilePic">
                                   <CardMedia
@@ -104,12 +104,12 @@ var ProfilePage = React.createClass({
                                 </Row>
                             </Col>
                         </Row>
-                        <Row className="show-grid">
+                        <Row className="show-grid profilePageGames">
                             <Col xs={12}>
                               <Row>
                                   <Col xs={12}>
-                                      <div className="gameHeader">
-                                          <h2>My Games</h2>
+                                      <div className="profilePageGamesHeader">
+                                          <h3>- My Games -</h3>
                                       </div>
                                       <div className="allGameStat" style={styles.root}>
                                         <GridList className="all-games-grid-list" style={styles.gridList} cols={2.2}>

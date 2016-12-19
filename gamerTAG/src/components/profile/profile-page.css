@@ -1,31 +1,16 @@
-@media (min-width: 768px) {
-  .myProfileData, .tagSection{
-    padding: 15px 15px;
-  }
-}
-
-.profilePageSplit {
-  border: solid 2px #3871BB;
-  border-bottom: 0;
-  background: linear-gradient(#F3843E, #FAB433);
-  padding-bottom: 20px;
-}
-
-.bottomPageSplit {
-  border-bottom: solid 2px #3871BB;
-}
-
-@media (min-width: 768px) {
-  .profilePageSplit {
-    padding: 20px;
-  }
-}
-
-.gamertag_input  {
-  max-width: 200px;
-}
-
-
 .profilePageHeader {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.profilePageInfo strong {
+    color: #FB8C00;
+}
+
+.profilePageGames {
+  padding: 20px;
+}
+
+.profilePageGamesHeader {
+  text-align: center;
 }
