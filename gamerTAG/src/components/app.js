@@ -6,12 +6,14 @@ import data from '../data';
 
 var App = React.createClass({
     getInitialState: function() {
-        return {isLoggedIn: false};
+      return {
+        isLoggedIn: false,
+        data: data
+      };
     },
     changeLogIn: function() {
         this.setState({
-            isLoggedIn: true,
-            data: data
+            isLoggedIn: true
         });
     },
     render: function() {
