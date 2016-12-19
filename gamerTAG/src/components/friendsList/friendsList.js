@@ -1,7 +1,6 @@
 import React from 'react';
 import Friend from './friend';
 import 'react-bootstrap';
-import data from '../../data.js';
 import {Row, Col, Grid} from 'react-bootstrap';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -11,9 +10,6 @@ import {sortFriends} from '../general/sortingFunctions';
 import {orange600} from 'material-ui/styles/colors';
 
 var FriendsList = React.createClass({
-    getInitialState: function() {
-        return data;
-    },
     componentDidMount: function() {
         this.props.changeLogIn();
     },
@@ -24,7 +20,7 @@ var FriendsList = React.createClass({
         this.sortBy(value);
     },
     sortBy: function(value) {
-        var sorted = this.state.user.friends;
+        var sorted = this.props.data.user.friends;
         sortFriends(sorted, value);
         this.setState({
             user: {
@@ -57,13 +53,13 @@ var FriendsList = React.createClass({
                     </Row>
                     <Row>
                         <Col xs={6} className="friendMenu">
-                            <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                            <SelectField floatingLabelText="Name" value={this.props.data.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
                                 <MenuItem value={"alphAZ"} primaryText="A-Z"/>
                                 <MenuItem value={"alphZA"} primaryText="Z-A"/>
                             </SelectField>
                         </Col>
                         <Col xs={6} className="friendMenu">
-                            <SelectField floatingLabelText="Status" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                            <SelectField floatingLabelText="Status" value={this.props.data.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
                                 <MenuItem value={"online"} primaryText="Online"/>
                                 <MenuItem value={"offline"} primaryText="Offline"/>
                             </SelectField>
@@ -72,7 +68,7 @@ var FriendsList = React.createClass({
                     <Row className="show-grid">
                         <Col xs={12}>
                             <div>
-                                {this.state.user.friends.map(function(user, index) {
+                                {this.props.data.user.friends.map(function(user, index) {
                                     return (<Friend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
                                 })}
                             </div>
