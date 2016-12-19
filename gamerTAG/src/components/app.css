@@ -11,13 +11,14 @@ grey: #6E6E6E
 
 body{
   background-color: #1d1d1d;
-  color: #aaa;
+  color: #bbb;
+  font-weight: 100;
   overflow-y: scroll;
 }
 
 .all-page-layout {
-  background-color: white;
-  color: #333;
+  background-color: #333;
+  color: #ccc;
 }
 
 @media (min-width: 768px) {

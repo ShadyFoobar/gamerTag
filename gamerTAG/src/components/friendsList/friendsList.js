@@ -34,48 +34,48 @@ var FriendsList = React.createClass({
                 width: 150
             },
             card: {
-              maxWidth: '10000px',
-              margin: '0 auto',
-              padding: '15px 25px',
-              backgroundColor: '#eee'
+              color: '#fff',
+              margin: '1em auto',
+              padding: '1em 2em',
+              backgroundColor: '#2f2f2f'
             },
             floatingLabel: {
               color: orange600
             },
         };
         return (
-                <Grid>
-                  <Card style={styles.card}>
-                    <Row className="show-grid">
-                        <Col xs={12} className="friendsPageHeader">
-                            <h1>- FRIENDS LIST -</h1>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={6} className="friendMenu">
-                            <SelectField floatingLabelText="Name" value={this.props.data.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
-                                <MenuItem value={"alphAZ"} primaryText="A-Z"/>
-                                <MenuItem value={"alphZA"} primaryText="Z-A"/>
-                            </SelectField>
-                        </Col>
-                        <Col xs={6} className="friendMenu">
-                            <SelectField floatingLabelText="Status" value={this.props.data.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
-                                <MenuItem value={"online"} primaryText="Online"/>
-                                <MenuItem value={"offline"} primaryText="Offline"/>
-                            </SelectField>
-                        </Col>
-                    </Row>
-                    <Row className="show-grid">
-                        <Col xs={12}>
-                            <div>
-                                {this.props.data.user.friends.map(function(user, index) {
-                                    return (<Friend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
-                                })}
-                            </div>
-                        </Col>
-                    </Row>
-                  </Card>
-                </Grid>
+          <Grid>
+            <Card style={styles.card}>
+              <Row>
+                  <Col xs={12} className="friendsPageHeader">
+                      <h1>- FRIENDS LIST -</h1>
+                  </Col>
+              </Row>
+              <Row>
+                  <Col xs={6} className="friendMenu">
+                      <SelectField floatingLabelText="Name" value={this.props.data.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                          <MenuItem value={"alphAZ"} primaryText="A-Z"/>
+                          <MenuItem value={"alphZA"} primaryText="Z-A"/>
+                      </SelectField>
+                  </Col>
+                  <Col xs={6} className="friendMenu">
+                      <SelectField floatingLabelText="Status" value={this.props.data.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                          <MenuItem value={"online"} primaryText="Online"/>
+                          <MenuItem value={"offline"} primaryText="Offline"/>
+                      </SelectField>
+                  </Col>
+              </Row>
+              <Row className="show-grid">
+                  <Col xs={12}>
+                      <div>
+                          {this.props.data.user.friends.map(function(user, index) {
+                              return (<Friend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
+                          })}
+                      </div>
+                  </Col>
+              </Row>
+            </Card>
+          </Grid>
         )
     }
 });

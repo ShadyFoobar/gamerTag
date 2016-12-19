@@ -3,8 +3,8 @@
     margin-bottom: 20px;
 }
 
-.profilePageInfo td {
-  color: #000000
+h3 {
+  font-weight: 800;
 }
 
 table, td {
@@ -15,7 +15,6 @@ table, td {
     color: #FB8C00;
 }
 
-
 .profilePageGamesHeader {
   text-align: center;
 }
@@ -23,10 +22,10 @@ table, td {
 .tdh {
     text-align: right;
 }
-
 .sectionHeader {
   text-align: center;
 }
+
 table{
   width: 100%;
   margin: 0 auto;
@@ -35,12 +34,13 @@ td {
   width: 200px;
 }
 
+/* Scroll bar for my games */
 .all-games-grid-list::-webkit-scrollbar {
   height: 8px;
 }
 
 .all-games-grid-list::-webkit-scrollbar-track {
-  background: #ccc;
+  background: #555;
 }
 
 .all-games-grid-list::-webkit-scrollbar-thumb {

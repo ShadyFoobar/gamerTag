@@ -10,37 +10,36 @@ var RecommendedFriend = React.createClass({
     render: function() {
         return (
             <div>
-              <Row className="show-grid reccomendedFriend">
-                        <Col xs={12}>
-                            <div className="friendData">
-                                <Row>
-                                    <Col xs={9} md={10} id="reccomended-friend-name">
-                                        <p>{this.props.friendName}</p>
-                                    </Col>
-                                    <Col xs={3} md={2}>
-                                        <FloatingActionButton
-                                          className="addFriendButton"
-                                          mini={true}
-                                          backgroundColor={blueGrey500}
-                                        >
-                                            <ContentAdd/>
-                                        </FloatingActionButton>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col xs={6}>
-                                        <p>Current: {this.props.friendRecent}</p>
-                                        <p>Status: {this.props.friendStatus}</p>
-                                    </Col>
-                                    <Col xs={6}>
-                                        <p>Status: {this.props.friendStatus}</p>
-                                        <p>Play Style: Casual</p>
-                                    </Col>
-                                </Row>
-
-                            </div>
-                        </Col>
-                    </Row>
+              <Row className="reccomendedFriend">
+                    <Col xs={12}>
+                        <div className="friendData">
+                            <Row>
+                                <Col xs={9} md={10} id="reccomended-friend-name">
+                                    <p>{this.props.friendName}</p>
+                                </Col>
+                                <Col xs={3} md={2}>
+                                    <FloatingActionButton
+                                      className="addFriendButton"
+                                      mini={true}
+                                      backgroundColor={blueGrey500}
+                                    >
+                                        <ContentAdd/>
+                                    </FloatingActionButton>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col xs={6}>
+                                    <p>Current: {this.props.friendRecent}</p>
+                                    <p>Status: {this.props.friendStatus}</p>
+                                </Col>
+                                <Col xs={6}>
+                                    <p>Status: {this.props.friendStatus}</p>
+                                    <p>Play Style: Casual</p>
+                                </Col>
+                            </Row>
+                        </div>
+                    </Col>
+                </Row>
             </div>
         )
     }

@@ -33,10 +33,10 @@ var addFriends = React.createClass({
                 width: 150
             },
             card: {
-                maxWidth: '10000px',
-                margin: '0 auto',
-                padding: '15px 25px',
-                backgroundColor: '#eee'
+              color: '#fff',
+              margin: '1em auto',
+              padding: '1em 2em',
+              backgroundColor: '#2f2f2f'
             },
             floatingLabel: {
               color: orange600

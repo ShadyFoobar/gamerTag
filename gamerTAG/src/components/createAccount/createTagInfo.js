@@ -9,6 +9,12 @@ var CreateTagInfo = React.createClass({
         blurFix: {
           willChange: 'contents'
         },
+        input: {
+          color: '#ddd'
+        },
+        hint: {
+          color: 'rgba(255,255,255,0.3)'
+        },
         underlineStyle: {
           borderColor: orange600,
         },
@@ -21,11 +27,13 @@ var CreateTagInfo = React.createClass({
                 <div className="form-group">
                   <TextField
                     style={styles.blurFix}
+                    inputStyle={styles.input}
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelText={this.props.tagName}
                     floatingLabelStyle={styles.floatingLabel}
                     floatingLabelFixed={true}
                     hintText="Enter name"
+                    hintStyle={styles.hint}
                   />
                 </div>
             </div>

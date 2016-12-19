@@ -17,6 +17,7 @@ const muiTheme = getMuiTheme({
    primary1Color: amber800,
    accent1Color: orange600,
  },
+ fontFamily: 'Open Sans, sans-serif',
  appBar: {
    height: 50,
  },

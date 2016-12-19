@@ -17,12 +17,13 @@ var ProfilePage = React.createClass({
                 width: 150
             },
             card: {
-                margin: '0 auto',
-                padding: '15px 25px',
-                backgroundColor: '#eee'
+              color: '#fff',
+              margin: '1em auto',
+              padding: '1em 2em',
+              backgroundColor: '#2f2f2f'
             },
             profileImg: {
-              padding: '2px 16px'
+              padding: '2px 1em'
             },
             floatingLabel: {
                 color: orange600
@@ -112,7 +113,9 @@ var ProfilePage = React.createClass({
                             </Row>
                         </Col>
                     </Row>
-                    <Row className="show-grid profilePageGames">
+                  </Card>
+                  <Card style={styles.card}>
+                    <Row className="profilePageGames">
                         <Col xs={12}>
                             <Row>
                                 <Col xs={12}>

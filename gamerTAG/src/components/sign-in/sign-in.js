@@ -14,6 +14,12 @@ var SignIn = React.createClass({
         blurFix: {
           willChange: 'contents'
         },
+        input: {
+          color: '#ddd'
+        },
+        hint: {
+          color: 'rgba(255,255,255,0.3)'
+        },
         underlineStyle: {
           borderColor: orange600,
         },
@@ -21,10 +27,10 @@ var SignIn = React.createClass({
           color: orange600
         },
         card: {
-          maxWidth: '375px',
-          margin: '0 auto',
-          padding: '10px 0',
-          backgroundColor: '#eee'
+          color: '#fff',
+          margin: '1em auto',
+          padding: '1em 2em',
+          backgroundColor: '#2f2f2f'
         }
       };
         return (
@@ -35,22 +41,26 @@ var SignIn = React.createClass({
                     <div className="sign-in-info">
                         <TextField
                           style={styles.blurFix}
+                          inputStyle={styles.input}
                           className="sign-in-email"
                           underlineFocusStyle={styles.underlineStyle}
                           floatingLabelText="Email Address"
                           floatingLabelStyle={styles.floatingLabel}
                           floatingLabelFixed={true}
                           hintText="Email Address"
+                          hintStyle={styles.hint}
                         />
                         <br/>
                         <TextField
                           style={styles.blurFix}
+                          inputStyle={styles.input}
                           className="sign-in-password"
                           underlineFocusStyle={styles.underlineStyle}
                           floatingLabelText="Password"
                           floatingLabelStyle={styles.floatingLabel}
                           floatingLabelFixed={true}
                           hintText="Password"
+                          hintStyle={styles.hint}
                           type="password"
                         />
                         <br/>

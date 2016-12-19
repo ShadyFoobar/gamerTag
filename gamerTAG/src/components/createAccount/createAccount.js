@@ -15,6 +15,12 @@ var CreateAccount = React.createClass({
       blurFix: {
         willChange: 'contents'
       },
+      input: {
+        color: '#ddd'
+      },
+      hint: {
+        color: 'rgba(255,255,255,0.3)'
+      },
       underlineStyle: {
         borderColor: orange600,
       },
@@ -23,9 +29,10 @@ var CreateAccount = React.createClass({
       },
       card: {
         maxWidth: '768px',
+        color: '#fff',
         margin: '0 auto',
-        padding: '10px 0',
-        backgroundColor: '#eee'
+        padding: '1em 2em',
+        backgroundColor: '#2f2f2f'
       }
     };
         return (
@@ -39,51 +46,63 @@ var CreateAccount = React.createClass({
                                 <h2>User Info</h2>
                                 <TextField
                                   style={styles.blurFix}
+                                  inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="gamerTAG"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
                                   hintText="Enter gamerTAG"
+                                  hintStyle={styles.hint}
                                 />
                                 <TextField
                                   style={styles.blurFix}
+                                  inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Name"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
                                   hintText="Enter name"
+                                  hintStyle={styles.hint}
                                 />
                                 <TextField
                                   style={styles.blurFix}
+                                  inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Age"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
                                   hintText="Enter age"
+                                  hintStyle={styles.hint}
                                 />
                                 <TextField
                                   style={styles.blurFix}
+                                  inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Location"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
                                   hintText="Enter location"
+                                  hintStyle={styles.hint}
                                 />
                                 <TextField
                                   style={styles.blurFix}
+                                  inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Password"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
                                   hintText="Enter Password"
+                                  hintStyle={styles.hint}
                                 />
                                 <TextField
                                   style={styles.blurFix}
+                                  inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Retype Password"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
                                   hintText="Retype Password"
+                                  hintStyle={styles.hint}
                                 />
                             </div>
                         </Col>

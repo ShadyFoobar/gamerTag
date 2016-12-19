@@ -1,4 +1,5 @@
 .friend {
+    color: #222;
     background: linear-gradient(#FAB433, #F3843E );
     box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 30px, rgba(0, 0, 0, 0.227451) 0px 6px 10px;
     margin: 10px;
@@ -12,7 +13,6 @@
 }
 
 .friendProfilePic img {
-    /*width: 100%;*/
     height: auto;
     max-height: 110px;
 }
