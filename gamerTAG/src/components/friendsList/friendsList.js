@@ -3,7 +3,6 @@ import Friend from './friend';
 import 'react-bootstrap';
 import data from '../../data.js';
 import {Row, Col, Grid} from 'react-bootstrap';
-import DropDownMenu from 'material-ui/DropDownMenu';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import './friend.css';
@@ -41,7 +40,7 @@ var FriendsList = React.createClass({
             card: {
               maxWidth: '10000px',
               margin: '0 auto',
-              padding: '10px 0',
+              padding: '15px 25px',
               backgroundColor: '#eee'
             },
             floatingLabel: {

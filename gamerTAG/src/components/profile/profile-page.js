@@ -1,8 +1,4 @@
 import React from 'react';
-import MyProfileData from './myProfileData';
-import AllGameStats from './gameStats/allGameStats';
-import GamerTagInfo from './gamerTagInfo/gamerTagInfo';
-import AddGame from './addGame/addGame';
 import {Row, Col, Grid} from 'react-bootstrap';
 import data from '../../data.js';
 import {Card} from 'material-ui/Card';
@@ -28,7 +24,7 @@ var ProfilePage = React.createClass({
             card: {
                 maxWidth: '10000px',
                 margin: '0 auto',
-                padding: '10px 0',
+                padding: '15px 25px',
                 backgroundColor: '#eee'
             },
             floatingLabel: {
@@ -54,12 +50,12 @@ var ProfilePage = React.createClass({
                         </Col>
                     </Row>
                     <Row className="profilePageInfo">
-                        <Col xs={12} sm={4}>
+                        <Col xs={12} sm={3}>
                             <div className="profilePic">
-                                <CardMedia overlay={< CardTitle title = {
+                                <CardMedia overlay={<CardTitle title={
                                     this.props.gamerTAG
                                 }
-                                subtitle = "Pro" style = {
+                                subtitle="Pro" style={
                                     styles.cardTitle
                                 } />}>
                                     <img src='/images/default_avatar.jpg' alt="profile-pic"/>
@@ -69,63 +65,54 @@ var ProfilePage = React.createClass({
                         <Col xs={12} sm={4}>
                             <Row>
                                 <Col sm={12} className="sectionHeader">
-                                        <h3>- Personal Info -</h3>
+                                    <h3>- Personal Info -</h3>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                        <p>
-                                            <strong>Name:
-                                            </strong>
-                                            {this.state.user.name}
-                                        </p>
-                                </Col>
-                                <Col sm={12} className="sectionInfo">
-                                        <p>
-                                            <strong>Location:
-                                            </strong>
-                                            {this.state.user.location}
-                                        </p>
-                                </Col>
-                                <Col sm={12} className="sectionInfo">
-                                        <p>
-                                            <strong>Status:
-                                            </strong>
-                                            {this.state.user.status}
-                                        </p>
+                                  <table>
+                                    <tbody>
+                                      <tr>
+                                          <td className="tdh"><strong>Name: </strong></td>
+                                          <td>{this.state.user.name}</td>
+                                      </tr>
+                                      <tr>
+                                          <td className="tdh"><strong>Location: </strong></td>
+                                          <td>{this.state.user.location}</td>
+                                      </tr>
+                                      <tr>
+                                          <td className="tdh"><strong>Status: </strong></td>
+                                          <td>{this.state.user.status}</td>
+                                      </tr>
+                                      </tbody>
+                                  </table>
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xs={12} sm={4}>
+                        <Col xs={12} sm={5}>
                             <Row>
                                 <Col sm={12} className="sectionHeader">
-                                        <h3>- Tag Info -</h3>
+                                    <h3>- Tag Info -</h3>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                        <p>
-                                            <strong>LoL:
-                                            </strong>
-                                            {this.state.user.gametag.league}
-                                        </p>
-                                </Col>
-                                <Col sm={12} className="sectionInfo">
-                                        <p>
-                                            <strong>Blizzard:
-                                            </strong>
-                                            {this.state.user.gametag.battlenet}
-                                        </p>
-                                </Col>
-                                <Col sm={12} className="sectionInfo">
-                                        <p>
-                                            <strong>Xbox:
-                                            </strong>
-                                            {this.state.user.gametag.xbox}
-                                        </p>
-                                </Col>
-                                <Col sm={12} className="sectionInfo">
-                                        <p>
-                                            <strong>Playstation:
-                                            </strong>
-                                            {this.state.user.gametag.playstation}
-                                        </p>
+                                  <table>
+                                    <tbody>
+                                      <tr>
+                                          <td className="tdh"><strong>LoL: </strong></td>
+                                          <td>{this.state.user.gametag.league}</td>
+                                      </tr>
+                                      <tr>
+                                          <td className="tdh"><strong>Blizzard: </strong></td>
+                                          <td>{this.state.user.gametag.battlenet}</td>
+                                      </tr>
+                                      <tr>
+                                          <td className="tdh"><strong>Xbox: </strong></td>
+                                          <td>{this.state.user.gametag.xbox}</td>
+                                      </tr>
+                                      <tr>
+                                          <td className="tdh"><strong>Playstation: </strong></td>
+                                          <td>{this.state.user.gametag.playstation}</td>
+                                      </tr>
+                                      </tbody>
+                                  </table>
                                 </Col>
                             </Row>
                         </Col>

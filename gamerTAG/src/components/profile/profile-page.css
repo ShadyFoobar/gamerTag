@@ -3,27 +3,34 @@
     margin-bottom: 20px;
 }
 
+.profilePageInfo td {
+  color: #000000
+}
+
+table, td {
+    padding: 10px;
+}
+
 .profilePageInfo strong {
     color: #FB8C00;
 }
 
-.profilePageGames {
-  padding: 20px;
-}
 
 .profilePageGamesHeader {
   text-align: center;
 }
 
-
-@media (max-width: 768px) {
-  .sectionHeader {
-    text-align: center;
-  }
+.tdh {
+    text-align: right;
 }
 
-@media (max-width: 768px) {
-  .sectionInfo {
-    text-align: center;
-  }
+.sectionHeader {
+  text-align: center;
+}
+table{
+  width: 100%;
+  margin: 0 auto;
+}
+td {
+  width: 200px;
 }
