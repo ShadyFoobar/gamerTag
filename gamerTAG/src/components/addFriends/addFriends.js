@@ -6,11 +6,10 @@ import MenuItem from 'material-ui/MenuItem';
 import {sortFriends} from '../general/sortingFunctions';
 import {Card} from 'material-ui/Card';
 import {orange600} from 'material-ui/styles/colors';
-import data from '../../data.js';
 
 var addFriends = React.createClass({
     getInitialState: function() {
-        return data;
+        return this.props.data;
     },
     componentDidMount: function() {
         this.props.changeLogIn();
