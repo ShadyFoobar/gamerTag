@@ -1,18 +1,13 @@
 import React from 'react';
 import {Row, Col, Grid} from 'react-bootstrap';
-import data from '../../data.js';
 import {Card} from 'material-ui/Card';
 import {orange600} from 'material-ui/styles/colors';
 import {CardMedia, CardTitle} from 'material-ui/Card';
 import {GridList} from 'material-ui/GridList';
-import tilesData from '../../data';
 import SingleGameStat from './gameStats/singleGameStat';
 import './profile-page.css';
 
 var ProfilePage = React.createClass({
-    getInitialState: function() {
-        return data;
-    },
     componentDidMount: function() {
         this.props.changeLogIn();
     },
@@ -72,15 +67,15 @@ var ProfilePage = React.createClass({
                                     <tbody>
                                       <tr>
                                           <td className="tdh"><strong>Name: </strong></td>
-                                          <td>{this.state.user.name}</td>
+                                          <td>{this.props.data.user.name}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Location: </strong></td>
-                                          <td>{this.state.user.location}</td>
+                                          <td>{this.props.data.user.location}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Status: </strong></td>
-                                          <td>{this.state.user.status}</td>
+                                          <td>{this.props.data.user.status}</td>
                                       </tr>
                                       </tbody>
                                   </table>
@@ -97,19 +92,19 @@ var ProfilePage = React.createClass({
                                     <tbody>
                                       <tr>
                                           <td className="tdh"><strong>LoL: </strong></td>
-                                          <td>{this.state.user.gametag.league}</td>
+                                          <td>{this.props.data.user.gametag.league}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Blizzard: </strong></td>
-                                          <td>{this.state.user.gametag.battlenet}</td>
+                                          <td>{this.props.data.user.gametag.battlenet}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Xbox: </strong></td>
-                                          <td>{this.state.user.gametag.xbox}</td>
+                                          <td>{this.props.data.user.gametag.xbox}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Playstation: </strong></td>
-                                          <td>{this.state.user.gametag.playstation}</td>
+                                          <td>{this.props.data.user.gametag.playstation}</td>
                                       </tr>
                                       </tbody>
                                   </table>
@@ -126,7 +121,7 @@ var ProfilePage = React.createClass({
                                     </div>
                                     <div className="allGameStat" style={styles.root}>
                                         <GridList className="all-games-grid-list" style={styles.gridList} cols={2.2}>
-                                            {tilesData.user.myGames.map((tile, index) => (<SingleGameStat tile={tile} index={index} key={tile.id}/>))}
+                                            {this.props.data.user.myGames.map((tile, index) => (<SingleGameStat tile={tile} index={index} key={tile.id}/>))}
                                         </GridList>
                                     </div>
                                 </Col>
