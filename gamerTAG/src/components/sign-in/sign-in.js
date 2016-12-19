@@ -27,6 +27,7 @@ var SignIn = React.createClass({
           color: orange600
         },
         card: {
+          maxWidth: '375px',
           color: '#fff',
           margin: '1em auto',
           padding: '1em 2em',
