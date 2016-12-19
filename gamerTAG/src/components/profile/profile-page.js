@@ -56,10 +56,10 @@ var ProfilePage = React.createClass({
                     <Row className="profilePageInfo">
                         <Col xs={12} sm={4}>
                             <div className="profilePic">
-                                <CardMedia overlay={< CardTitle title={
+                                <CardMedia overlay={< CardTitle title = {
                                     this.props.gamerTAG
                                 }
-                                subtitle="Pro" style={
+                                subtitle = "Pro" style = {
                                     styles.cardTitle
                                 } />}>
                                     <img src='/images/default_avatar.jpg' alt="profile-pic"/>
@@ -69,77 +69,63 @@ var ProfilePage = React.createClass({
                         <Col xs={12} sm={4}>
                             <Row>
                                 <Col sm={12} className="sectionHeader">
-                                    <div>
                                         <h3>- Personal Info -</h3>
-                                    </div>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                    <div>
                                         <p>
                                             <strong>Name:
                                             </strong>
                                             {this.state.user.name}
                                         </p>
-                                    </div>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                    <div>
                                         <p>
                                             <strong>Location:
                                             </strong>
                                             {this.state.user.location}
                                         </p>
-                                    </div>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                    <div>
                                         <p>
                                             <strong>Status:
                                             </strong>
                                             {this.state.user.status}
                                         </p>
-                                    </div>
                                 </Col>
                             </Row>
                         </Col>
                         <Col xs={12} sm={4}>
                             <Row>
                                 <Col sm={12} className="sectionHeader">
-                                    <div>
                                         <h3>- Tag Info -</h3>
-                                    </div>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                    <div>
                                         <p>
-                                            <strong>LoL Summoner Name:
+                                            <strong>LoL:
                                             </strong>
-                                            {this.state.user.gametag.league}</p>
-                                    </div>
+                                            {this.state.user.gametag.league}
+                                        </p>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                    <div>
                                         <p>
-                                            <strong>Blizzard BattleTag:
+                                            <strong>Blizzard:
                                             </strong>
-                                            {this.state.user.gametag.battlenet}</p>
-                                    </div>
+                                            {this.state.user.gametag.battlenet}
+                                        </p>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                    <div>
                                         <p>
-                                            <strong>Xbox Gamertag:
+                                            <strong>Xbox:
                                             </strong>
-                                            {this.state.user.gametag.xbox}</p>
-                                    </div>
+                                            {this.state.user.gametag.xbox}
+                                        </p>
                                 </Col>
                                 <Col sm={12} className="sectionInfo">
-                                    <div>
                                         <p>
-                                            <strong>Playstation UserName:
+                                            <strong>Playstation:
                                             </strong>
-                                            {this.state.user.gametag.playstation}</p>
-                                    </div>
+                                            {this.state.user.gametag.playstation}
+                                        </p>
                                 </Col>
                             </Row>
                         </Col>
