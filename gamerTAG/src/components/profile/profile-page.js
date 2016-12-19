@@ -17,10 +17,12 @@ var ProfilePage = React.createClass({
                 width: 150
             },
             card: {
-                maxWidth: '10000px',
                 margin: '0 auto',
                 padding: '15px 25px',
                 backgroundColor: '#eee'
+            },
+            profileImg: {
+              padding: '2px 16px'
             },
             floatingLabel: {
                 color: orange600
@@ -39,7 +41,7 @@ var ProfilePage = React.createClass({
         return (
             <Grid>
                 <Card style={styles.card}>
-                    <Row className="show-grid profilePageHeader">
+                    <Row className="profilePageHeader">
                         <Col xs={12} className="">
                             <h1>- My Profile -</h1>
                         </Col>
@@ -47,12 +49,10 @@ var ProfilePage = React.createClass({
                     <Row className="profilePageInfo">
                         <Col xs={12} sm={3}>
                             <div className="profilePic">
-                                <CardMedia overlay={<CardTitle title={
-                                    this.props.gamerTAG
+                                <CardMedia overlay={<CardTitle style={styles.profileImg} title={
+                                    this.props.data.user.gamerTAG
                                 }
-                                subtitle="Pro" style={
-                                    styles.cardTitle
-                                } />}>
+                                 />}>
                                     <img src='/images/default_avatar.jpg' alt="profile-pic"/>
                                 </CardMedia>
                             </div>
