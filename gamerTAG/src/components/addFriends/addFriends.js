@@ -5,7 +5,7 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import {sortFriends} from '../general/sortingFunctions';
 import {Card} from 'material-ui/Card';
-import {orange600} from 'material-ui/styles/colors';
+import {orange600, grey200} from 'material-ui/styles/colors';
 
 var addFriends = React.createClass({
     getInitialState: function() {
@@ -13,6 +13,7 @@ var addFriends = React.createClass({
     },
     componentDidMount: function() {
         this.props.changeLogIn();
+        console.log(this.state.value);
     },
     handleChange: function(event, index, value) {
         this.setState({value});
@@ -41,6 +42,9 @@ var addFriends = React.createClass({
             floatingLabel: {
               color: orange600
             },
+            menuLable: {
+              color: grey200
+            }
         };
         return (
             <Grid>
@@ -52,19 +56,19 @@ var addFriends = React.createClass({
                     </Row>
                     <Row>
                         <Col xs={4} className="friendMenu">
-                            <SelectField floatingLabelText="Game" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                            <SelectField floatingLabelText="Game" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} labelStyle={styles.menuLable} floatingLabelStyle={styles.floatingLabel}>
                                 <MenuItem value={"gameAZ"} primaryText="A-Z"/>
                                 <MenuItem value={"gameZA"} primaryText="Z-A"/>
                             </SelectField>
                         </Col>
                         <Col xs={4} className="friendMenu">
-                            <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                            <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} labelStyle={styles.menuLable} floatingLabelStyle={styles.floatingLabel}>
                                 <MenuItem value={"alphAZ"} primaryText="A-Z"/>
                                 <MenuItem value={"alphZA"} primaryText="Z-A"/>
                             </SelectField>
                         </Col>
                         <Col xs={4} className="friendMenu">
-                            <SelectField floatingLabelText="Status" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                            <SelectField floatingLabelText="Status" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} labelStyle={styles.menuLable} floatingLabelStyle={styles.floatingLabel}>
                                 <MenuItem value={"online"} primaryText="Online"/>
                                 <MenuItem value={"offline"} primaryText="Offline"/>
                             </SelectField>

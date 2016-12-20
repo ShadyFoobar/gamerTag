@@ -7,9 +7,15 @@ import MenuItem from 'material-ui/MenuItem';
 import './friend.css';
 import { Card } from 'material-ui/Card';
 import {sortFriends} from '../general/sortingFunctions';
-import {orange600} from 'material-ui/styles/colors';
+import {orange600, grey200} from 'material-ui/styles/colors';
 
 var FriendsList = React.createClass({
+    getInitialState: function() {
+      return {
+        value: undefined
+      }
+
+    },
     componentDidMount: function() {
         this.props.changeLogIn();
     },
@@ -42,6 +48,9 @@ var FriendsList = React.createClass({
             floatingLabel: {
               color: orange600
             },
+            menuLable: {
+              color: grey200
+            }
         };
         return (
           <Grid>
@@ -53,13 +62,13 @@ var FriendsList = React.createClass({
               </Row>
               <Row>
                   <Col xs={6} className="friendMenu">
-                      <SelectField floatingLabelText="Name" value={this.props.data.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                      <SelectField floatingLabelText="Name" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} labelStyle={styles.menuLable} floatingLabelStyle={styles.floatingLabel}>
                           <MenuItem value={"alphAZ"} primaryText="A-Z"/>
                           <MenuItem value={"alphZA"} primaryText="Z-A"/>
                       </SelectField>
                   </Col>
                   <Col xs={6} className="friendMenu">
-                      <SelectField floatingLabelText="Status" value={this.props.data.value} onChange={this.handleChange} style={styles.customWidth} floatingLabelStyle={styles.floatingLabel}>
+                      <SelectField floatingLabelText="Status" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} labelStyle={styles.menuLable} floatingLabelStyle={styles.floatingLabel}>
                           <MenuItem value={"online"} primaryText="Online"/>
                           <MenuItem value={"offline"} primaryText="Offline"/>
                       </SelectField>
