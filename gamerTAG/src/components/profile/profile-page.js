@@ -44,7 +44,7 @@ var ProfilePage = React.createClass({
                 <Card style={styles.card}>
                     <Row className="profilePageHeader">
                         <Col xs={12} className="">
-                            <h1>- My Profile -</h1>
+                            <h1>- PROFILE -</h1>
                         </Col>
                     </Row>
                     <Row className="profilePageInfo">

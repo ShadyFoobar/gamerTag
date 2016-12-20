@@ -41,7 +41,7 @@ var CreateAccount = React.createClass({
         return (
             <Grid className="account-creation">
               <Card style={styles.card}>
-                <h1>Create Account</h1>
+                <h1>- CREATE ACCOUNT -</h1>
                 <form className="account-information">
                     <Row className="show-grid">
                         <Col xs={12} sm={6}>

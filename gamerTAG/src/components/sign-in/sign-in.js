@@ -40,7 +40,7 @@ var SignIn = React.createClass({
         return (
             <Grid className="account-sign-in">
               <Card style={styles.card}>
-                <h1>Sign In </h1>
+                <h1>- Sign In -</h1>
                 <form className="account-information">
                     <div className="sign-in-info">
                         <TextField
