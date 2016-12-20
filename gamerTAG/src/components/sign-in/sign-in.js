@@ -32,6 +32,9 @@ var SignIn = React.createClass({
           margin: '1em auto',
           padding: '1em 2em',
           backgroundColor: '#2f2f2f'
+        },
+        flatButton: {
+          color: '#eee'
         }
       };
         return (
@@ -70,11 +73,11 @@ var SignIn = React.createClass({
                         </Link>
                         <br/>
                         <Link to='/profile-page'>
-                          <FlatButton label="Forgot Password" />
+                          <FlatButton label="Forgot Password" style={styles.flatButton} />
                         </Link>
                         <br/>
                         <Link to='/create-account'>
-                          <FlatButton label="Don't got a Tag" />
+                          <FlatButton label="Don't got a Tag" style={styles.flatButton} />
                         </Link>
 
                     </div>

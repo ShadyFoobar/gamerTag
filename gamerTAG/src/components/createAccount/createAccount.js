@@ -33,6 +33,9 @@ var CreateAccount = React.createClass({
         margin: '0 auto',
         padding: '1em 2em',
         backgroundColor: '#2f2f2f'
+      },
+      flatButton: {
+        color: '#eee'
       }
     };
         return (
@@ -123,7 +126,7 @@ var CreateAccount = React.createClass({
                 </Link>
                 <br/>
                 <Link to='/sign-in'>
-                  <FlatButton label="Got a Tag?" />
+                  <FlatButton label="Got a Tag?" style={styles.flatButton} />
                 </Link>
               </Card>
             </Grid>
