@@ -1,7 +1,7 @@
 module.exports = {
     users: [
         {
-            id: 0001,
+            id: 1,
             email: "nt@yahoo.com",
             password: "password",
             firstName: "Nic",
@@ -19,7 +19,7 @@ module.exports = {
                 steam: "TicTacTolmais"
             },
             friends: [
-                0002, 0004
+                2, 4
             ],
             games: [
                 {
@@ -40,7 +40,7 @@ module.exports = {
                 }
             ]
         }, {
-            id: 0002,
+            id: 2,
             email: "dr@yahoo.com",
             password: "password",
             firstName: "Dale",
@@ -57,7 +57,7 @@ module.exports = {
                 playstation: "RaceCar",
                 steam: "TheRaceMan"
             },
-            friends: [0001],
+            friends: [1],
             games: [
                 {
                     id: 0,
@@ -65,7 +65,7 @@ module.exports = {
                 }
             ]
         }, {
-            id: 0003,
+            id: 3,
             email: "abc@yahoo.com",
             password: "password",
             firstName: "ABC",
@@ -93,7 +93,7 @@ module.exports = {
                 }
             ]
         }, {
-            id: 0004,
+            id: 4,
             email: "zx@yahoo.com",
             password: "password",
             firstName: "Bob",
@@ -110,7 +110,7 @@ module.exports = {
                 playstation: "",
                 steam: ""
             },
-            friends: [0001],
+            friends: [1],
             games: [
                 {
                     id: 4,

@@ -25,16 +25,19 @@ var FriendsList = React.createClass({
         });
         this.sortBy(value);
     },
+
+    //Sorting function cannot set state of new data file
     sortBy: function(value) {
-        var sorted = this.props.data.user.friends;
-        sortFriends(sorted, value);
+        var sorted = this.state.users;
         this.setState({
-            user: {
+            users: {
                 friends: sortFriends(sorted, value)
             }
         });
     },
     render: function() {
+        // cannot set a current user so hardcoded it
+        const tempVar = this.props.data.users[0].friends[0];
         const styles = {
             customWidth: {
                 width: 150
@@ -77,8 +80,14 @@ var FriendsList = React.createClass({
               <Row className="show-grid">
                   <Col xs={12}>
                       <div>
-                          {this.props.data.user.friends.map(function(user, index) {
-                              return (<Friend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
+                          {this.props.data.users.filter(function(user, index) {
+                              if (tempVar === user.id) {
+                                  return true;
+                              } else {
+                                  return false;
+                              }
+                          }).map(function(user, index) {
+                              return (<Friend key={index} friendFirstName={user.firstName} friendLastName={user.lastName} friendStatus={user.status}/>)
                           })}
                       </div>
                   </Col>

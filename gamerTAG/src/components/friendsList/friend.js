@@ -11,9 +11,8 @@ var Friend = React.createClass({
                         <img src='/images/default_avatar.jpg' alt="profile-pic"/>
                     </Col>
                     <Col xs={8} sm={9} md={10} lg={10} className="friendData">
-                        <p id="friend-name">{this.props.friendName}</p>
+                        <p id="friend-name">{this.props.friendFirstName} {this.props.friendLastName}</p>
                         <p id="friend-status">Status: {this.props.friendStatus}</p>
-                        <p id="friend-recent">Current: {this.props.friendRecent}</p>
                     </Col>
                 </Row>
             </div>

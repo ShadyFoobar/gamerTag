@@ -3,17 +3,17 @@ var exports = module.exports ={};
 exports.sortFriends = function(array, value){
   if(value === "alphAZ"){
    return array.sort(function(a, b) {
-      if (a.gamerTAG.toLowerCase() < b.gamerTAG.toLowerCase())
+      if (a.firstName.toLowerCase() < b.firstName.toLowerCase())
           return -1;
-      if (a.gamerTAG.toLowerCase() > b.gamerTAG.toLowerCase())
+      if (a.firstName.toLowerCase() > b.firstName.toLowerCase())
           return 1;
       return 0;
     });
   } else if (value === "alphZA") {
     return array.sort(function(a, b) {
-       if (a.gamerTAG.toLowerCase() > b.gamerTAG.toLowerCase())
+       if (a.firstName.toLowerCase() > b.firstName.toLowerCase())
            return -1;
-       if (a.gamerTAG.toLowerCase() < b.gamerTAG.toLowerCase())
+       if (a.firstName.toLowerCase() < b.firstName.toLowerCase())
            return 1;
        return 0;
      });
@@ -35,17 +35,17 @@ exports.sortFriends = function(array, value){
      });
   } else if (value === "gameAZ") {
     return array.sort(function(a, b) {
-       if (a.recentGame.toLowerCase() < b.recentGame.toLowerCase())
+       if (a.lastName.toLowerCase() < b.lastName.toLowerCase())
            return -1;
-       if (a.recentGame.toLowerCase() > b.recentGame.toLowerCase())
+       if (a.lastName.toLowerCase() > b.lastName.toLowerCase())
            return 1;
        return 0;
      });
   } else if (value === "gameZA") {
     return array.sort(function(a, b) {
-       if (a.recentGame.toLowerCase() > b.recentGame.toLowerCase())
+       if (a.lastName.toLowerCase() > b.lastName.toLowerCase())
            return -1;
-       if (a.recentGame.toLowerCase() < b.recentGame.toLowerCase())
+       if (a.lastName.toLowerCase() < b.lastName.toLowerCase())
            return 1;
        return 0;
      });

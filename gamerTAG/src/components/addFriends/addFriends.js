@@ -9,7 +9,9 @@ import {orange600, grey200} from 'material-ui/styles/colors';
 
 var addFriends = React.createClass({
     getInitialState: function() {
-        return this.props.data;
+      return {
+        value: undefined
+      }
     },
     componentDidMount: function() {
         this.props.changeLogIn();
@@ -20,7 +22,7 @@ var addFriends = React.createClass({
         this.sortBy(value);
     },
     sortBy: function(value) {
-        var sorted = this.state.allUsers;
+        var sorted = this.props.data.users;
         sortFriends(sorted, value);
         this.setState({
             user: {
@@ -77,25 +79,25 @@ var addFriends = React.createClass({
 
                     <Row>
                         <Col xs={12} sm={6}>
-                            {this.state.allUsers.filter(function(user, index) {
+                            {this.props.data.users.filter(function(user, index) {
                                 if (index % 2 === 0) {
                                     return true;
                                 } else {
                                     return false;
                                 }
                             }).map(function(user, index) {
-                                return (<RecommendedFriend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
+                                return (<RecommendedFriend key={index} friendName={user.firstName} friendStatus={user.status} friendRecent={user.status}/>)
                             })}
                         </Col>
                         <Col xs={12} sm={6}>
-                            {this.state.allUsers.filter(function(user, index) {
+                            {this.props.data.users.filter(function(user, index) {
                                 if (index % 2 !== 0) {
                                     return true;
                                 } else {
                                     return false;
                                 }
                             }).map(function(user, index) {
-                                return (<RecommendedFriend key={index} friendName={user.gamerTAG} friendStatus={user.status} friendRecent={user.recentGame}/>)
+                                return (<RecommendedFriend key={index} friendName={user.firstName} friendStatus={user.status} friendRecent={user.status}/>)
                             })}
                         </Col>
                     </Row>

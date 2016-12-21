@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './general/navbar';
 import Footer from './general/footer';
 import './app.css'
-import data from '../data';
+import data from '../data2';
 
 var App = React.createClass({
     getInitialState: function() {
