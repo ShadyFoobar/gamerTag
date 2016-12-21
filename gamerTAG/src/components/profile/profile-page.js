@@ -78,6 +78,14 @@ var ProfilePage = React.createClass({
                                           <td className="tdh"><strong>Status: </strong></td>
                                           <td>{this.props.data.user.status}</td>
                                       </tr>
+                                      <tr>
+                                          <td className="tdh"><strong>Age: </strong></td>
+                                          <td>{this.props.data.user.age}</td>
+                                      </tr>
+                                      <tr>
+                                          <td className="tdh"><strong>Play Style: </strong></td>
+                                          <td>{this.props.data.user.style}</td>
+                                      </tr>
                                       </tbody>
                                   </table>
                                 </Col>
@@ -105,6 +113,10 @@ var ProfilePage = React.createClass({
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Playstation: </strong></td>
+                                          <td>{this.props.data.user.gametag.playstation}</td>
+                                      </tr>
+                                      <tr>
+                                          <td className="tdh"><strong>Steam: </strong></td>
                                           <td>{this.props.data.user.gametag.playstation}</td>
                                       </tr>
                                       </tbody>
