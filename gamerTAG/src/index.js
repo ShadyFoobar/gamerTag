@@ -7,10 +7,12 @@ import CreateAccount from './components/createAccount/createAccount';
 import Landing from './components/landing/landing';
 import SignIn from './components/sign-in/sign-in';
 import ProfilePage from './components/profile/profile-page';
-import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import {Router, Route, IndexRoute} from 'react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { amber800, orange600 } from 'material-ui/styles/colors';
+import { Provider } from 'react-redux';
+import {store , history} from './store';
 
 const muiTheme = getMuiTheme({
  palette: {
@@ -26,7 +28,8 @@ const muiTheme = getMuiTheme({
 ReactDOM.render(
 
   <MuiThemeProvider muiTheme={muiTheme}>
-    <Router history={browserHistory}>
+    <Provider store={store}>
+    <Router history={history}>
         <Route path="/" component={App}>
             <IndexRoute component={Landing}/>
             <Route path="create-account" component={CreateAccount}/>
@@ -37,5 +40,7 @@ ReactDOM.render(
             {/* <Route path="*" component={NoMatch}/> */}
         </Route>
     </Router>
-  </MuiThemeProvider> ,document.getElementById('main')
+  </Provider>
+</MuiThemeProvider> ,document.getElementById('main')
+
 );
