@@ -24,6 +24,13 @@ export function addUser(firstName, lastName, id, email, status, location, age, i
   }
 }
 
+export function getGames(currentUser) {
+  return {
+    type: 'GET_GAMES',
+    currentUser: currentUser
+  }
+}
+
 export function removeFriend(currentUser, friendID){
   return{
     type: 'REMOVE_FRIEND',
