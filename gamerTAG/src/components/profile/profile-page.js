@@ -8,12 +8,9 @@ import SingleGameStat from './gameStats/singleGameStat';
 import './profile-page.css';
 
 var ProfilePage = React.createClass({
-    componentDidMount: function() {
-        this.props.changeLogIn();
-    },
     renderGames: function(){
       return this.props.games.filter((game) => {
-        for(var userGames of this.props.users[0].games){
+        for(var userGames of this.props.currentUser.games){
           if(game.id === userGames.id){
             return true;
           }
@@ -77,23 +74,23 @@ var ProfilePage = React.createClass({
                                     <tbody>
                                       <tr>
                                           <td className="tdh"><strong>Name: </strong></td>
-                                          <td>{this.props.users[0].firstName} {this.props.users[0].lastName}</td>
+                                          <td>{this.props.currentUser.firstName} {this.props.currentUser.lastName}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Location: </strong></td>
-                                          <td>{this.props.users[0].location}</td>
+                                          <td>{this.props.currentUser.location}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Status: </strong></td>
-                                          <td>{this.props.users[0].status}</td>
+                                          <td>{this.props.currentUser.status}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Age: </strong></td>
-                                          <td>{this.props.users[0].age}</td>
+                                          <td>{this.props.currentUser.age}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Play Style: </strong></td>
-                                          <td>{this.props.users[0].style}</td>
+                                          <td>{this.props.currentUser.style}</td>
                                       </tr>
                                       </tbody>
                                   </table>
@@ -110,23 +107,23 @@ var ProfilePage = React.createClass({
                                     <tbody>
                                       <tr>
                                           <td className="tdh"><strong>LoL: </strong></td>
-                                          <td>{this.props.users[0].gamertags.league}</td>
+                                          <td>{this.props.currentUser.gamertags.league}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Blizzard: </strong></td>
-                                          <td>{this.props.users[0].gamertags.battlenet}</td>
+                                          <td>{this.props.currentUser.gamertags.battlenet}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Xbox: </strong></td>
-                                          <td>{this.props.users[0].gamertags.xbox}</td>
+                                          <td>{this.props.currentUser.gamertags.xbox}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Playstation: </strong></td>
-                                          <td>{this.props.users[0].gamertags.playstation}</td>
+                                          <td>{this.props.currentUser.gamertags.playstation}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Steam: </strong></td>
-                                          <td>{this.props.users[0].gamertags.steam}</td>
+                                          <td>{this.props.currentUser.gamertags.steam}</td>
                                       </tr>
                                       </tbody>
                                   </table>

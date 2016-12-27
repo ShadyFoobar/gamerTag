@@ -13,10 +13,6 @@ var addFriends = React.createClass({
         value: undefined
       }
     },
-    componentDidMount: function() {
-        this.props.changeLogIn();
-        console.log(this.state.value);
-    },
     handleChange: function(event, index, value) {
         this.setState({value});
         this.sortBy(value);

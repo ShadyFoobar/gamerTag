@@ -5,29 +5,18 @@ import './app.css'
 // import data from '../data2';
 
 var Main = React.createClass({
-    getInitialState: function() {
-      return {
-        isLoggedIn: false,
-      };
-    },
-    changeLogIn: function() {
-        this.setState({
-            isLoggedIn: true
-        });
-    },
     render: function() {
       var v = this;
       var childrenWithProps = React.Children.map(this.props.children, function(child) {
             return React.cloneElement(child, {
-              changeLogIn: v.changeLogIn,
-              isLoggedIn: v.state.isLoggedIn,
               users: v.props.users,
-              games: v.props.games
+              games: v.props.games,
+              currentUser: v.props.currentUser
             });
         });
         return (
             <div>
-                <Navbar isLoggedIn={this.state.isLoggedIn} changeLogIn={this.changeLogIn}/>
+                <Navbar currentUser={this.props.currentUser} />
                 {childrenWithProps}
                 <Footer/>
             </div>

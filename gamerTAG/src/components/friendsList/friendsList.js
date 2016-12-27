@@ -16,9 +16,6 @@ var FriendsList = React.createClass({
       }
 
     },
-    componentDidMount: function() {
-        this.props.changeLogIn();
-    },
     handleChange: function(event, index, value) {
         this.setState({
           value: value
@@ -37,7 +34,7 @@ var FriendsList = React.createClass({
     },
     render: function() {
         // cannot set a current user so hardcoded it
-        const tempVar = this.props.users[0].friends[0];
+        const tempVar = this.props.currentUser.friends[0];
         const styles = {
             customWidth: {
                 width: 150
