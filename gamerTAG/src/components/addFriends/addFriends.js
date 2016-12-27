@@ -22,7 +22,7 @@ var addFriends = React.createClass({
         this.sortBy(value);
     },
     sortBy: function(value) {
-        var sorted = this.props.data.users;
+        var sorted = this.props.users;
         sortFriends(sorted, value);
         this.setState({
             user: {
@@ -79,7 +79,7 @@ var addFriends = React.createClass({
 
                     <Row>
                         <Col xs={12} sm={6}>
-                            {this.props.data.users.filter(function(user, index) {
+                            {this.props.users.filter(function(user, index) {
                                 if (index % 2 === 0) {
                                     return true;
                                 } else {
@@ -90,7 +90,7 @@ var addFriends = React.createClass({
                             })}
                         </Col>
                         <Col xs={12} sm={6}>
-                            {this.props.data.users.filter(function(user, index) {
+                            {this.props.users.filter(function(user, index) {
                                 if (index % 2 !== 0) {
                                     return true;
                                 } else {

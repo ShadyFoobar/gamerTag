@@ -5,7 +5,8 @@ import Main from './main';
 
 function mapStateToProps(state){
   return {
-    users: state.users
+    users: state.users,
+    games: state.games
   }
 }
 

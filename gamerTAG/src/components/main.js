@@ -2,13 +2,12 @@ import React from 'react';
 import Navbar from './general/navbar';
 import Footer from './general/footer';
 import './app.css'
-import data from '../data2';
+// import data from '../data2';
 
 var Main = React.createClass({
     getInitialState: function() {
       return {
         isLoggedIn: false,
-        data: data
       };
     },
     changeLogIn: function() {
@@ -22,7 +21,8 @@ var Main = React.createClass({
             return React.cloneElement(child, {
               changeLogIn: v.changeLogIn,
               isLoggedIn: v.state.isLoggedIn,
-              data: v.state.data
+              users: v.props.users,
+              games: v.props.games
             });
         });
         return (

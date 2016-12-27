@@ -51,7 +51,7 @@ var ProfilePage = React.createClass({
                         <Col xs={12} sm={3}>
                             <div className="profilePic">
                                 <CardMedia overlay={<CardTitle style={styles.profileImg} title={
-                                    this.props.data.users.firstName
+                                    this.props.users.firstName
                                 }
                                  />}>
                                     <img src='/images/default_avatar.jpg' alt="profile-pic"/>
@@ -68,23 +68,23 @@ var ProfilePage = React.createClass({
                                     <tbody>
                                       <tr>
                                           <td className="tdh"><strong>Name: </strong></td>
-                                          <td>{this.props.data.users[0].firstName} {this.props.data.users[0].lastName}</td>
+                                          <td>{this.props.users[0].firstName} {this.props.users[0].lastName}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Location: </strong></td>
-                                          <td>{this.props.data.users[0].location}</td>
+                                          <td>{this.props.users[0].location}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Status: </strong></td>
-                                          <td>{this.props.data.users[0].status}</td>
+                                          <td>{this.props.users[0].status}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Age: </strong></td>
-                                          <td>{this.props.data.users[0].age}</td>
+                                          <td>{this.props.users[0].age}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Play Style: </strong></td>
-                                          <td>{this.props.data.users[0].style}</td>
+                                          <td>{this.props.users[0].style}</td>
                                       </tr>
                                       </tbody>
                                   </table>
@@ -101,23 +101,23 @@ var ProfilePage = React.createClass({
                                     <tbody>
                                       <tr>
                                           <td className="tdh"><strong>LoL: </strong></td>
-                                          <td>{this.props.data.users[0].gamertags.league}</td>
+                                          <td>{this.props.users[0].gamertags.league}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Blizzard: </strong></td>
-                                          <td>{this.props.data.users[0].gamertags.battlenet}</td>
+                                          <td>{this.props.users[0].gamertags.battlenet}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Xbox: </strong></td>
-                                          <td>{this.props.data.users[0].gamertags.xbox}</td>
+                                          <td>{this.props.users[0].gamertags.xbox}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Playstation: </strong></td>
-                                          <td>{this.props.data.users[0].gamertags.playstation}</td>
+                                          <td>{this.props.users[0].gamertags.playstation}</td>
                                       </tr>
                                       <tr>
                                           <td className="tdh"><strong>Steam: </strong></td>
-                                          <td>{this.props.data.users[0].gamertags.steam}</td>
+                                          <td>{this.props.users[0].gamertags.steam}</td>
                                       </tr>
                                       </tbody>
                                   </table>
@@ -136,7 +136,7 @@ var ProfilePage = React.createClass({
                                     </div>
                                     <div className="allGameStat" style={styles.root}>
                                         <GridList className="all-games-grid-list" style={styles.gridList} cols={2.2}>
-                                            {this.props.data.games.map((tile, index) => (<SingleGameStat tile={tile} index={index} key={tile.id}/>))}
+                                            {this.props.games.map((tile, index) => (<SingleGameStat tile={tile} index={index} key={tile.id}/>))}
                                         </GridList>
                                     </div>
                                 </Col>
