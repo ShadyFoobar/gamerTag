@@ -13,8 +13,6 @@ var ProfilePage = React.createClass({
         for(var userGames of this.props.currentUser.games){
           if(game.id === userGames.id){
             return true;
-          } else {
-            return false;
           }
         }
       }).map((tile, index) => (<SingleGameStat tile={tile} index={index} key={tile.id}/>));
