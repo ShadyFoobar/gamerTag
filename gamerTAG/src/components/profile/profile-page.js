@@ -11,6 +11,15 @@ var ProfilePage = React.createClass({
     componentDidMount: function() {
         this.props.changeLogIn();
     },
+    renderGames: function(){
+      return this.props.games.filter((game) => {
+        for(var userGames of this.props.users[0].games){
+          if(game.id === userGames.id){
+            return true;
+          }
+        }
+      }).map((tile, index) => (<SingleGameStat tile={tile} index={index} key={tile.id}/>));
+    },
     render: function() {
         const styles = {
             customWidth: {
@@ -136,7 +145,7 @@ var ProfilePage = React.createClass({
                                     </div>
                                     <div className="allGameStat" style={styles.root}>
                                         <GridList className="all-games-grid-list" style={styles.gridList} cols={2.2}>
-                                            {this.props.games.map((tile, index) => (<SingleGameStat tile={tile} index={index} key={tile.id}/>))}
+                                            {this.renderGames()}
                                         </GridList>
                                     </div>
                                 </Col>
