@@ -6,9 +6,31 @@ import TextField from 'material-ui/TextField';
 import {orange600} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import './sign-in.css'
+import './sign-in.css';
+import { dispatch, push } from 'react-router-redux';
+import { browserHistory } from 'react-router'
+
 
 var SignIn = React.createClass({
+    componentDidUpdate: function(){
+      this.checkCredentials();
+    },
+    checkCredentials : function() {
+      for(var user of this.props.users){
+        if(user.email === this.state.email && user.password === this.state.password){
+            //set currentUser
+            browserHistory.push('/profile-page')
+        }
+      }
+    },
+    handle: function(){
+      var email = document.querySelector("#email").value;
+      var password = document.querySelector("#password").value;
+      this.setState({
+        email: email,
+        password:password
+      });
+    },
     render: function() {
       var styles = {
         blurFix: {
@@ -44,6 +66,7 @@ var SignIn = React.createClass({
                 <form className="account-information">
                     <div className="sign-in-info">
                         <TextField
+                          id="email"
                           style={styles.blurFix}
                           inputStyle={styles.input}
                           className="sign-in-email"
@@ -56,6 +79,7 @@ var SignIn = React.createClass({
                         />
                         <br/>
                         <TextField
+                          id="password"
                           style={styles.blurFix}
                           inputStyle={styles.input}
                           className="sign-in-password"
@@ -68,9 +92,7 @@ var SignIn = React.createClass({
                           type="password"
                         />
                         <br/>
-                        <Link to='/profile-page'>
-                          <RaisedButton type="submit" form="form1" value="Submit" label="Submit" primary={true}/>
-                        </Link>
+                          <RaisedButton type="submit" form="form1" value="Submit" label="Submit" primary={true} onClick={this.handle}/>
                         <br/>
                         <Link to='/profile-page'>
                           <FlatButton label="Forgot Password" style={styles.flatButton} />
