@@ -7,9 +7,6 @@ import {orange600} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import './sign-in.css';
-import { dispatch, push } from 'react-router-redux';
-import { browserHistory } from 'react-router'
-
 
 var SignIn = React.createClass({
     componentDidUpdate: function(){
@@ -19,17 +16,18 @@ var SignIn = React.createClass({
       for(var user of this.props.users){
         if(user.email === this.state.email && user.password === this.state.password){
             //set currentUser
-            browserHistory.push('/profile-page')
+            this.props.router.push('/profile-page')
         }
       }
     },
-    handle: function(){
+    handle: function(e){
       var email = document.querySelector("#email").value;
       var password = document.querySelector("#password").value;
       this.setState({
         email: email,
         password:password
       });
+      e.preventDefault();
     },
     render: function() {
       var styles = {
