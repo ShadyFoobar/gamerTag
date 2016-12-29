@@ -7,7 +7,6 @@ function mapStateToProps(state){
   return {
     users: state.users,
     games: state.games,
-    currentUser : state.users[0]
   }
 }
 

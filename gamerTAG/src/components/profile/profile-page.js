@@ -10,7 +10,8 @@ import './profile-page.css';
 var ProfilePage = React.createClass({
     renderGames: function(){
       return this.props.games.filter((game) => {
-        for(var userGames of this.props.currentUser.games){
+        var currentUser = this.props.currentUser;
+        for(var userGames of currentUser.games){
           if(game.id === userGames.id){
             return true;
           }

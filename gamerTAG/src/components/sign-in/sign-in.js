@@ -9,18 +9,25 @@ import RaisedButton from 'material-ui/RaisedButton';
 import './sign-in.css';
 
 var SignIn = React.createClass({
+    getInitialState: function() {
+      return {
+        email: "",
+        password: ""
+      }
+    },
     componentDidUpdate: function(){
       this.checkCredentials();
     },
     checkCredentials : function() {
       for(var user of this.props.users){
         if(user.email === this.state.email && user.password === this.state.password){
-            //set currentUser
-            this.props.router.push('/profile-page')
+            localStorage.setItem("currentUser", JSON.stringify(user));
+            this.props.setCurrentUser(user);
+            this.props.router.push('/profile-page');
         }
       }
     },
-    handle: function(e){
+    setPossibleUser: function(e){
       var email = document.querySelector("#email").value;
       var password = document.querySelector("#password").value;
       this.setState({
@@ -90,7 +97,7 @@ var SignIn = React.createClass({
                           type="password"
                         />
                         <br/>
-                          <RaisedButton type="submit" form="form1" value="Submit" label="Submit" primary={true} onClick={this.handle}/>
+                          <RaisedButton type="submit" form="form1" value="Submit" label="Submit" primary={true} onClick={this.setPossibleUser}/>
                         <br/>
                         <Link to='/profile-page'>
                           <FlatButton label="Forgot Password" style={styles.flatButton} />

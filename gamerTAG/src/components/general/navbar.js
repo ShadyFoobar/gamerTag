@@ -7,7 +7,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 var Navbar = React.createClass({
-    ifLogged: function(){
+    isLogged: function(){
       if(this.props.currentUser){
         return true;
       } else {
@@ -31,7 +31,7 @@ var Navbar = React.createClass({
                   <img src='/images/gamerTAG.png' alt="profile-pic" />
                 </Link>
               </div>
-              <ToggleDisplay show={this.ifLogged()}>
+              <ToggleDisplay show={this.isLogged()}>
                 <Tabs style={styles.tabs}>
                   <Tab label="Profile" containerElement={<Link to="/profile-page"/>} style={styles.tab}/>
                   <Tab label="Friends" containerElement={<Link to="/friends-list"/>} style={styles.tab}/>
