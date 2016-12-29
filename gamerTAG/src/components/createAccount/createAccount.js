@@ -16,7 +16,6 @@ var CreateAccount = React.createClass({
   },
   componentDidMount: function(){
     localStorage.removeItem("currentUser");
-    this.props.setCurrentUser(null);
   },
   componentDidUpdate: function(){
     this.checkCredentials();
@@ -33,15 +32,17 @@ var CreateAccount = React.createClass({
     var location = document.querySelector("#location").value;
     var age = document.querySelector("#age").value;
     var password = document.querySelector("#password").value;
-    var gamertagLeague = document.querySelector("#gamertagLeague").value;
-    var gamertagBattle = document.querySelector("#gamertagBattle").value;
-    var gamertagXbox = document.querySelector("#gamertagXbox").value;
-    var gamertagPlaystation = document.querySelector("#gamertagPlaystation").value;
+    var league = document.querySelector("#gamertagLeague").value;
+    var battlenet = document.querySelector("#gamertagBattle").value;
+    var xbox = document.querySelector("#gamertagXbox").value;
+    var playstation = document.querySelector("#gamertagPlaystation").value;
+    var steam = document.querySelector("#gamertagSteam").value;
     var gamertags = {
-      gamertagLeague,
-      gamertagBattle,
-      gamertagXbox,
-      gamertagPlaystation
+      league,
+      battlenet,
+      xbox,
+      playstation,
+      steam
     };
     this.props.addUser(firstName, lastName, email, location, age, password, gamertags);
     e.preventDefault();
@@ -193,6 +194,17 @@ var CreateAccount = React.createClass({
                                   inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="PlayStation Profile"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter name"
+                                  hintStyle={styles.hint}
+                                />
+                                <TextField
+                                  id="gamertagSteam"
+                                  style={styles.blurFix}
+                                  inputStyle={styles.input}
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="Steam Profile"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
                                   hintText="Enter name"

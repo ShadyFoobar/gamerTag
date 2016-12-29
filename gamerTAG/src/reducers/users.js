@@ -1,7 +1,7 @@
 function users(state = [], action) {
     switch (action.type) {
         case 'ADD_USER':
-            console.log("Adding User",action);
+            console.log("Adding User",action.gamertags);
             return [
                 ...state, {
                     "id": state.length + 1,
