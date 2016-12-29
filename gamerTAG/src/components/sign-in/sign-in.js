@@ -15,6 +15,10 @@ var SignIn = React.createClass({
         password: ""
       }
     },
+    componentDidMount: function(){
+      localStorage.removeItem("currentUser");
+      this.props.setCurrentUser(null);
+    },
     componentDidUpdate: function(){
       this.checkCredentials();
     },

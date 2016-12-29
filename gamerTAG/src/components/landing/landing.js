@@ -29,6 +29,10 @@ var styles = {
   }
 }
 var Landing = React.createClass({
+    componentDidMount: function(){
+      localStorage.removeItem("currentUser");
+      this.props.setCurrentUser(null);
+    },
     render: function() {
         return (
             <Grid className="account-creation">
