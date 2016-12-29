@@ -10,6 +10,34 @@ import RaisedButton from 'material-ui/RaisedButton';
 import './create.css';
 
 var CreateAccount = React.createClass({
+  // componentDidUpdate: function(){
+  //   this.checkCredentials();
+  // },
+  // checkCredentials : function() {
+  //         this.props.setCurrentUser(this.props.users[this.props.users.length + 1]);
+  //         localStorage.setItem("currentUser", JSON.stringify(this.props.currentUser));
+  //         this.props.router.push('/profile-page');
+  // },
+  createUser: function(e){
+    var firstName = document.querySelector("#firstName").value;
+    var lastName = document.querySelector("#lastName").value;
+    var email = document.querySelector("#email").value;
+    var location = document.querySelector("#location").value;
+    var age = document.querySelector("#age").value;
+    var password = document.querySelector("#password").value;
+    var gamertagLeague = document.querySelector("#gamertagLeague").value;
+    var gamertagBattle = document.querySelector("#gamertagBattle").value;
+    var gamertagXbox = document.querySelector("#gamertagXbox").value;
+    var gamertagPlaystation = document.querySelector("#gamertagPlaystation").value;
+    var gamertags = {
+      gamertagLeague,
+      gamertagBattle,
+      gamertagXbox,
+      gamertagPlaystation
+    };
+    this.props.addUser(firstName, lastName, email, location, age, password, gamertags);
+    e.preventDefault();
+  },
   render: function() {
     var styles = {
       blurFix: {
@@ -48,26 +76,29 @@ var CreateAccount = React.createClass({
                             <div className="user-info">
                                 <h2>User Info</h2>
                                 <TextField
+                                  id="firstName"
                                   style={styles.blurFix}
                                   inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
-                                  floatingLabelText="gamerTAG"
+                                  floatingLabelText="First Name"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
-                                  hintText="Enter gamerTAG"
+                                  hintText="Enter First Name"
                                   hintStyle={styles.hint}
                                 />
                                 <TextField
+                                  id="lastName"
                                   style={styles.blurFix}
                                   inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
-                                  floatingLabelText="Name"
+                                  floatingLabelText="Last Name"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
-                                  hintText="Enter name"
+                                  hintText="Enter last name"
                                   hintStyle={styles.hint}
                                 />
                                 <TextField
+                                  id="age"
                                   style={styles.blurFix}
                                   inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
@@ -78,6 +109,7 @@ var CreateAccount = React.createClass({
                                   hintStyle={styles.hint}
                                 />
                                 <TextField
+                                  id="location"
                                   style={styles.blurFix}
                                   inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
@@ -88,23 +120,25 @@ var CreateAccount = React.createClass({
                                   hintStyle={styles.hint}
                                 />
                                 <TextField
+                                  id="email"
+                                  style={styles.blurFix}
+                                  inputStyle={styles.input}
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="Email"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter Email"
+                                  hintStyle={styles.hint}
+                                />
+                                <TextField
+                                  id="password"
                                   style={styles.blurFix}
                                   inputStyle={styles.input}
                                   underlineFocusStyle={styles.underlineStyle}
                                   floatingLabelText="Password"
                                   floatingLabelStyle={styles.floatingLabel}
                                   floatingLabelFixed={true}
-                                  hintText="Enter Password"
-                                  hintStyle={styles.hint}
-                                />
-                                <TextField
-                                  style={styles.blurFix}
-                                  inputStyle={styles.input}
-                                  underlineFocusStyle={styles.underlineStyle}
-                                  floatingLabelText="Retype Password"
-                                  floatingLabelStyle={styles.floatingLabel}
-                                  floatingLabelFixed={true}
-                                  hintText="Retype Password"
+                                  hintText="Type Password"
                                   hintStyle={styles.hint}
                                 />
                             </div>
@@ -112,17 +146,57 @@ var CreateAccount = React.createClass({
                         <Col xs={12} sm={6}>
                             <div className="tag-info">
                                 <h2>Tag Info</h2>
-                                <CreateTagInfo tagName="Battle.net Tag"/>
-                                <CreateTagInfo tagName="LoL Summoner Name"/>
-                                <CreateTagInfo tagName="Xbox Gamertag"/>
-                                <CreateTagInfo tagName="PlayStation Profile"/>
+                                <TextField
+                                  id="gamertagBattle"
+                                  style={styles.blurFix}
+                                  inputStyle={styles.input}
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="BattleNet Tag"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter name"
+                                  hintStyle={styles.hint}
+                                />
+                                <TextField
+                                  id="gamertagLeague"
+                                  style={styles.blurFix}
+                                  inputStyle={styles.input}
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="LoL Summoner Name"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter name"
+                                  hintStyle={styles.hint}
+                                />
+                                <TextField
+                                  id="gamertagXbox"
+                                  style={styles.blurFix}
+                                  inputStyle={styles.input}
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="Xbox Gamertag"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter name"
+                                  hintStyle={styles.hint}
+                                />
+                                <TextField
+                                  id="gamertagPlaystation"
+                                  style={styles.blurFix}
+                                  inputStyle={styles.input}
+                                  underlineFocusStyle={styles.underlineStyle}
+                                  floatingLabelText="PlayStation Profile"
+                                  floatingLabelStyle={styles.floatingLabel}
+                                  floatingLabelFixed={true}
+                                  hintText="Enter name"
+                                  hintStyle={styles.hint}
+                                />
                             </div>
                         </Col>
                     </Row>
                 </form>
                 <br/>
                 <Link to='/profile-page'>
-                  <RaisedButton type="submit" form="form1" value="Submit" label="Submit" primary={true}/>
+                  <RaisedButton type="submit" form="form1" value="Submit" label="Submit" primary={true} onClick={this.createUser}/>
                 </Link>
                 <br/>
                 <Link to='/sign-in'>

@@ -1,6 +1,27 @@
 function users(state = [], action) {
-  console.log(state, action);
-  return state;
+    switch (action.type) {
+        case 'ADD_USER':
+            console.log("Adding User",action);
+            return [
+                ...state, {
+                    "id": state.length + 1,
+                    "email": action.email,
+                    "password": action.password,
+                    "firstName": action.firstName,
+                    "lastName": action.lastName,
+                    "status": "",
+                    "location": action.location,
+                    "age": action.age,
+                    "image": "",
+                    "style": "",
+                    "gamertags": action.gamertags,
+                    "friends": [],
+                    "games": []
+                }
+            ]
+        default:
+            return state;
+    }
 }
 
 module.exports = users;
