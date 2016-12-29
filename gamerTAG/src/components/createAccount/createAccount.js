@@ -10,14 +10,18 @@ import RaisedButton from 'material-ui/RaisedButton';
 import './create.css';
 
 var CreateAccount = React.createClass({
-  // componentDidUpdate: function(){
-  //   this.checkCredentials();
-  // },
-  // checkCredentials : function() {
-  //         this.props.setCurrentUser(this.props.users[this.props.users.length + 1]);
-  //         localStorage.setItem("currentUser", JSON.stringify(this.props.currentUser));
-  //         this.props.router.push('/profile-page');
-  // },
+  getInitialState: function(){
+    return {
+    }
+  },
+  componentDidUpdate: function(){
+    this.checkCredentials();
+  },
+  checkCredentials : function() {
+    this.props.setCurrentUser(this.props.users[this.props.users.length - 1]);
+    localStorage.setItem("currentUser", JSON.stringify(this.props.currentUser));
+    this.props.router.push('/profile-page');
+  },
   createUser: function(e){
     var firstName = document.querySelector("#firstName").value;
     var lastName = document.querySelector("#lastName").value;
