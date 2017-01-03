@@ -44,7 +44,11 @@ var CreateAccount = React.createClass({
       playstation,
       steam
     };
-    this.props.addUser(firstName, lastName, email, location, age, password, gamertags);
+    if(firstName === "" || lastName === "" || email === "" || location === "" || age === "" || password === "" ){
+      console.log("Fill in all fields")
+    } else {
+      this.props.addUser(firstName, lastName, email, location, age, password, gamertags);
+    }
     e.preventDefault();
   },
   render: function() {
