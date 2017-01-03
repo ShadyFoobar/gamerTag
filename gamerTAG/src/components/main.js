@@ -32,7 +32,8 @@ var Main = React.createClass({
               games: v.props.games,
               currentUser: v.state.currentUser,
               setCurrentUser: v.state.setCurrentUser,
-              addUser: v.props.addUser
+              addUser: v.props.addUser,
+              addFriend: v.props.addFriend
             });
         });
         return (

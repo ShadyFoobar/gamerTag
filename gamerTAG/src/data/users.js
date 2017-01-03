@@ -1,8 +1,8 @@
 const users = [
     {
         "id": 1,
-        "email": "nt@yahoo.com",
-        "password": "password",
+        "email": "a",
+        "password": "a",
         "firstName": "Nic",
         "lastName": "Tolmais",
         "status": "Online",

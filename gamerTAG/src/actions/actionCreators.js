@@ -10,3 +10,11 @@ export function addUser(firstName, lastName,  email, location, age, password, ga
     gamertags: gamertags,
   }
 }
+
+export function addFriend(currentUserID, friendID){
+  return {
+    type: 'ADD_FRIEND',
+    currentUserID: currentUserID,
+    friendID: friendID
+  }
+}

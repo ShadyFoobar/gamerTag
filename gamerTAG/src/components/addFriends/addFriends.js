@@ -75,25 +75,25 @@ var addFriends = React.createClass({
 
                     <Row>
                         <Col xs={12} sm={6}>
-                            {this.props.users.filter(function(user, index) {
+                            {this.props.users.filter((user, index) => {
                                 if (index % 2 === 0) {
                                     return true;
                                 } else {
                                     return false;
                                 }
-                            }).map(function(user, index) {
-                                return (<RecommendedFriend key={index} friendName={user.firstName} friendStatus={user.status} friendRecent={user.status}/>)
+                            }).map((user, index) => {
+                                return (<RecommendedFriend key={index} friendName={user.firstName} friendStatus={user.status} friendRecent={user.status} friendID={user.id} currentUserID={this.props.currentUser.id} addFriend={this.props.addFriend} />)
                             })}
                         </Col>
                         <Col xs={12} sm={6}>
-                            {this.props.users.filter(function(user, index) {
+                            {this.props.users.filter((user, index) => {
                                 if (index % 2 !== 0) {
                                     return true;
                                 } else {
                                     return false;
                                 }
-                            }).map(function(user, index) {
-                                return (<RecommendedFriend key={index} friendName={user.firstName} friendStatus={user.status} friendRecent={user.status}/>)
+                            }).map((user, index) => {
+                                return (<RecommendedFriend key={index} friendName={user.firstName} friendStatus={user.status} friendRecent={user.status} friendID={user.id} currentUserID={this.props.currentUser.id} addFriend={this.props.addFriend}/>)
                             })}
                         </Col>
                     </Row>

@@ -7,6 +7,9 @@ import {blueGrey500} from 'material-ui/styles/colors';
 
 
 var RecommendedFriend = React.createClass({
+    addFriendToFriendList: function(){
+      this.props.addFriend(this.props.currentUserID, this.props.friendID)
+    },
     render: function() {
         return (
             <div>
@@ -19,6 +22,7 @@ var RecommendedFriend = React.createClass({
                                 </Col>
                                 <Col xs={3} md={2}>
                                     <FloatingActionButton
+                                      onClick={this.addFriendToFriendList}
                                       className="addFriendButton"
                                       mini={true}
                                       backgroundColor={blueGrey500}

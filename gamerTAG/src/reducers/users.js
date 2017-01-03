@@ -19,6 +19,15 @@ function users(state = [], action) {
                     "games": []
                 }
             ]
+        case 'ADD_FRIEND':
+        // NOT ADDING TO ARRAY CORRECTLY
+          console.log("adding Friend", action.currentUserID, action.friendID);
+          console.log(state[action.currentUserID].friends)
+          return [
+            ...state.slice(0, action.currentUserID),
+            {...state[action.currentUserID], friends: [state[action.currentUserID].friends].push(action.friendID)},
+            ...state.slice(action.currentUserID + 1)
+          ]
         default:
             return state;
     }
