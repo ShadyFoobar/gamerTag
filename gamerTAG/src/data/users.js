@@ -22,7 +22,7 @@ const users = [
         ],
         "games": [
             {
-                "id": 1,
+                "id": 0,
                 "skill": "Pro"
             }, {
                 "id": 2,

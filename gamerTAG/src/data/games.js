@@ -1,9 +1,9 @@
 const games = [
   {
     "id": 0,
-    "title": 'League of Legends',
-    "img": 'images/grid-list/league.jpg',
-    "skill": "Pro"
+    "title": 'AddGame',
+    "img": 'images/grid-list/plus.png',
+    "skill": ""
   },
   {
     "id": 1,
