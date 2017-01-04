@@ -75,7 +75,19 @@ var addFriends = React.createClass({
 
                     <Row>
                         <Col xs={12} sm={6}>
-                            {this.props.users.filter((user, index) => {
+
+                            {this.props.users.filter((user,index) => {
+                              if (this.props.users[this.props.currentUser.id - 1].id !== user.id) {
+                                return true;
+                              }
+                            }).filter((user, index) =>{
+                              for(var i = 0; i <= this.props.users[this.props.currentUser.id - 1].friends.length; i++){
+                                if (this.props.users[this.props.currentUser.id - 1].friends[i] === user.id) {
+                                  return false;
+                                }
+                              }
+                              return true;
+                            }).filter((user, index) => {
                                 if (index % 2 === 0) {
                                     return true;
                                 } else {
@@ -86,7 +98,18 @@ var addFriends = React.createClass({
                             })}
                         </Col>
                         <Col xs={12} sm={6}>
-                            {this.props.users.filter((user, index) => {
+                            {this.props.users.filter((user,index) => {
+                              if (this.props.users[this.props.currentUser.id - 1].id !== user.id) {
+                                return true;
+                              }
+                            }).filter((user, index) =>{
+                              for(var i = 0; i <= this.props.users[this.props.currentUser.id - 1].friends.length; i++){
+                                if (this.props.users[this.props.currentUser.id - 1].friends[i] === user.id) {
+                                    return false;
+                                }
+                              }
+                              return true;
+                            }).filter((user, index) => {
                                 if (index % 2 !== 0) {
                                     return true;
                                 } else {
