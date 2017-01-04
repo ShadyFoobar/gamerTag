@@ -18,3 +18,11 @@ export function addFriend(currentUserID, friendID){
     friendID: friendID
   }
 }
+
+export function removeFriend(currentUserID, friendID){
+  return {
+    type: 'REMOVE_FRIEND',
+    currentUserID: currentUserID,
+    friendID: friendID
+  }
+}

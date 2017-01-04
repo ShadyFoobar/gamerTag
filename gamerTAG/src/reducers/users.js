@@ -18,11 +18,20 @@ function users(state = [], action) {
                     "games": []
                 }
             ]
+
         case 'ADD_FRIEND':
-        //ADDS FRIEND EVEN IF ALREADY ADDED
           return [
             ...state.slice(0, action.currentUserID - 1),
             {...state[action.currentUserID - 1], friends: state[action.currentUserID - 1].friends.concat(action.friendID)},
+            ...state.slice(action.currentUserID)
+          ]
+
+        case 'REMOVE_FRIEND':
+          console.log(state, action);
+          console.log()
+          return [
+            ...state.slice(0, action.currentUserID - 1),
+            {...state[action.currentUserID - 1], friends: state[action.currentUserID - 1].friends.splice(action.friendID,1)},
             ...state.slice(action.currentUserID)
           ]
         default:

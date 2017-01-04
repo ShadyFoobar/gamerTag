@@ -33,7 +33,8 @@ var Main = React.createClass({
               currentUser: v.state.currentUser,
               setCurrentUser: v.state.setCurrentUser,
               addUser: v.props.addUser,
-              addFriend: v.props.addFriend
+              addFriend: v.props.addFriend,
+              removeFriend: v.props.removeFriend
             });
         });
         return (

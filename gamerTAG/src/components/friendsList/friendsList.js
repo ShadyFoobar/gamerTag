@@ -82,7 +82,7 @@ var FriendsList = React.createClass({
                               }
                             }
                           }).map((user, index) => {
-                              return (<Friend key={index} friendFirstName={user.firstName} friendLastName={user.lastName} friendStatus={user.status}/>)
+                              return (<Friend key={index} friendFirstName={user.firstName} friendLastName={user.lastName} friendStatus={user.status} friendID={user.id} currentUserID={this.props.currentUser.id} removeFriend={this.props.removeFriend}/>)
                           })}
                       </div>
                   </Col>

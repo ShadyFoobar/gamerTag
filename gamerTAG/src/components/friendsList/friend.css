@@ -29,3 +29,9 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.addFriendButton {
+  position:absolute;
+  top: 0;
+  right: 0;
+}
