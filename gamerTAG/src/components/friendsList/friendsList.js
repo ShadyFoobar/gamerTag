@@ -33,8 +33,6 @@ var FriendsList = React.createClass({
         });
     },
     render: function() {
-        // cannot set a current user so hardcoded it
-        const tempVar = this.props.currentUser.friends[0];
         const styles = {
             customWidth: {
                 width: 150
@@ -77,13 +75,13 @@ var FriendsList = React.createClass({
               <Row className="show-grid">
                   <Col xs={12}>
                       <div>
-                          {this.props.users.filter(function(user, index) {
-                              if (tempVar === user.id) {
+                          {this.props.users.filter((user, index) => {
+                            for(var i = 0; i <= this.props.users[this.props.currentUser.id - 1].friends.length; i++){
+                              if (this.props.users[this.props.currentUser.id - 1].friends[i] === user.id) {
                                   return true;
-                              } else {
-                                  return false;
                               }
-                          }).map(function(user, index) {
+                            }
+                          }).map((user, index) => {
                               return (<Friend key={index} friendFirstName={user.firstName} friendLastName={user.lastName} friendStatus={user.status}/>)
                           })}
                       </div>

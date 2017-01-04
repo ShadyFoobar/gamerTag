@@ -1,7 +1,6 @@
 function users(state = [], action) {
     switch (action.type) {
         case 'ADD_USER':
-            console.log("Adding User",action.gamertags);
             return [
                 ...state, {
                     "id": state.length + 1,
@@ -20,13 +19,11 @@ function users(state = [], action) {
                 }
             ]
         case 'ADD_FRIEND':
-        // NOT ADDING TO ARRAY CORRECTLY
-          console.log("adding Friend", action.currentUserID, action.friendID);
-          console.log(state[action.currentUserID].friends)
+        //ADDS FRIEND EVEN IF ALREADY ADDED
           return [
-            ...state.slice(0, action.currentUserID),
-            {...state[action.currentUserID], friends: [state[action.currentUserID].friends].push(action.friendID)},
-            ...state.slice(action.currentUserID + 1)
+            ...state.slice(0, action.currentUserID - 1),
+            {...state[action.currentUserID - 1], friends: state[action.currentUserID - 1].friends.concat(action.friendID)},
+            ...state.slice(action.currentUserID)
           ]
         default:
             return state;
